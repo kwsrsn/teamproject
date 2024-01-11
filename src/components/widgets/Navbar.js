@@ -23,8 +23,9 @@ function Navbar() {
             <section>
                 
                 <nav className="navbar">
-
-                    <Link to='/' className='logo'><i className='fas fa-home' /> Pro-Blog </Link>
+                    <img src="/images/logonavbar.png" style={{ height: '80px', padding:'5px' }}/>
+                    
+                    <Link to='/' className='logo'><i className='fas fa-home' /> PRELIMINARY MENTAL ASSESSMENT </Link>
 
                     <div className="menu-icon" onClick={changeClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} ></i>
