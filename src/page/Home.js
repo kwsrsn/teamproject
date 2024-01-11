@@ -1,10 +1,12 @@
 import React from 'react';
-
+import './style.css';
 const Home = props => {
     return (
-        <div className=""> 
-            <p>Hello World</p>
-        </div>     
+        <div className="textcolor"> 
+            <p>แบบประเมินสภาพจิตใจ</p>
+        </div>
+             
+
     );
 };
 export default Home
