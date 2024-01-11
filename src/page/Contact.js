@@ -1,10 +1,23 @@
 import React from 'react';
+import './style.css'
 
 const Contact = props => {
     return (
-        <div className=""> 
-            <p>Hello World2</p>
-        </div>  
+        <div>
+            <div className="textheadcontact"> 
+                <p>ติดต่อสอบถาม/แจ้งปัญหาการใช้งาน</p>
+            </div> 
+            <div>
+                <div className='contact'>
+                    0xx-xxx-xxxx<br/>คลินิค.....<br/>
+                    0xx-xxx-xxxx<br/>คลินิค.....
+                </div>
+                <div className='contact'>
+                    0xx-xxx-xxxx<br/>คลินิค.....<br/>
+                    0xx-xxx-xxxx<br/>คลินิค.....
+                </div>
+            </div> 
+        </div>
     );
 };
 export default Contact

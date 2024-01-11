@@ -1,5 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap');
+
 .textcolor{
     font-style: 36px;
     color: green;
     font-family: 'Josefin Sans', sans-serif;
+}
+
+.textheadcontact{
+    font-size: 20px;
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-weight: bold;
+}
+
+.contact{
+    text-align: left;
+    padding-left: 50px;
+
 }
