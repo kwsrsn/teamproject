@@ -43,6 +43,10 @@
     border: 2px solid #273d5c;
     cursor: pointer;
 }
+.homebutton:hover{
+    background-color: #273d5c;
+    color: white;
+}
 
 /*News*/
 .picsize{
@@ -64,6 +68,17 @@
     text-align: left;
     color: white;
     padding: 10px;
+}
+.piccontent{
+    margin-top: 20px;
+    height: 110px;
+    width: 200px;
+    object-fit: cover;
+    float: left;  
+}
+.directionnews{
+    display: flex;
+    flex-direction: column;
 }
 
 /*contact*/

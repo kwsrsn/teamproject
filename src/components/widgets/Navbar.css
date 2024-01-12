@@ -6,6 +6,7 @@
     position: fixed;
     background: #374659;
     height: 90px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +52,7 @@
 }
 
 .nav-links:hover {
-    background-color: #000;
+    background-color: #6b6b6b;
     border-radius: 5px;
 }
 
