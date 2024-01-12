@@ -4,7 +4,7 @@ import './style.css'
 const Contact = props => {
     return (
         <div>
-            <div className="textheadcontact"> 
+            <div className="texthead"> 
                 <p>ติดต่อสอบถาม/แจ้งปัญหาการใช้งาน</p>
             </div> 
             <div>

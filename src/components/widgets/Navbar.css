@@ -3,7 +3,7 @@
 
 
 .navbar {
-    position: relative;
+    position: fixed;
     background: #374659;
     height: 90px;
     display: flex;

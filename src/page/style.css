@@ -1,16 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
 
-.textcolor{
-    font-style: 36px;
-    color: green;
-    font-family: 'Josefin Sans', sans-serif;
-}
 
-.textheadcontact{
+
+.texthead{
     font-size: 20px;
     font-family: 'Noto Sans Thai', sans-serif;
     font-weight: bold;
 }
+
+/*home*/
+.texthome{
+    font-size: 55px;
+    font-weight:bold;
+    text-align: center;
+    color: #273d5c;
+    font-family: 'PT Sans Narrow', sans-serif;
+    /*border: 1px solid #273d5c;*/
+}
+.textcontent{
+    text-align: left; 
+    color: #273d5c;
+    font-family: 'Kanit', sans-serif;
+    display: grid;
+    place-items: center;
+}
+.item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.sizehome{
+    height: 100%;
+}
+.homebutton{
+    background-color: #F4F4F4;
+    font-size: 15px;
+    color: #273d5c;
+    place-items: center;
+    height: 8vh;
+    width: 25vh;
+    font-family: 'Kanit', sans-serif;
+    border: 2px solid #273d5c;
+    cursor: pointer;
+}
+
+/*News*/
+.picsize{
+    margin-top: 120px;
+    height: 350px;
+    width: 500px;
+    object-fit: cover;
+}
+.contenthead{
+    font-size: 20px;
+    font-family: 'Kanit', sans-serif;
+    color: #273d5c;
+}
+.boxcover{
+    margin-top: 120px;
+    width: 600px;
+    background-color: #45D7EE;
+    font-family: 'Kanit', sans-serif;
+    text-align: left;
+    color: white;
+    padding: 10px;
+}
+
+/*contact*/
+
 
 .contact{
     text-align: left;
