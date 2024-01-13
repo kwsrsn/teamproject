@@ -52,8 +52,9 @@
 }
 
 .nav-links:hover {
-    background-color: #6b6b6b;
-    border-radius: 5px;
+    background-color: #ffffff;
+    color: #273d5c;
+    border-radius: 15px;
 }
 
 .fa-bars {

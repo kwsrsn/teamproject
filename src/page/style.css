@@ -9,7 +9,10 @@
     font-weight: bold;
 }
 
+
+/**/
 /*home*/
+/**/
 .texthome{
     font-size: 55px;
     font-weight:bold;
@@ -30,7 +33,7 @@
     grid-template-columns: 1fr 1fr;
 }
 .sizehome{
-    height: 100%;
+    height: 100vh;
 }
 .homebutton{
     background-color: #F4F4F4;
@@ -47,8 +50,16 @@
     background-color: #273d5c;
     color: white;
 }
+.pichome{
+    display: grid;
+    max-width: 100%;
+    height: 100vh;
+}
 
+
+/**/
 /*News*/
+/**/
 .picsize{
     margin-top: 120px;
     height: 350px;
@@ -63,7 +74,7 @@
 .boxcover{
     margin-top: 120px;
     width: 600px;
-    background-color: #45D7EE;
+    background-color: #70B2F6;
     font-family: 'Kanit', sans-serif;
     text-align: left;
     color: white;
@@ -71,19 +82,39 @@
 }
 .piccontent{
     margin-top: 20px;
-    height: 110px;
-    width: 200px;
+    height: 100px;
+    width: 170px;
     object-fit: cover;
-    float: left;  
+    float: left;
+    margin-left: 5px;  
 }
 .directionnews{
+    height:614px; 
+    width: 620px;
     display: flex;
     flex-direction: column;
+    
+}
+.boxcontent{
+    margin-top: 20px;
+    height: 2px;
+    background-color: #70B2F6;
+    width: 600px;;
+    padding: 1px;
+}
+.scroll{
+    display: flex;
+    flex-direction: column;
+    overflow:auto;
+}
+.newsleft{
+    height: 100vh;
 }
 
+
+/**/
 /*contact*/
-
-
+/**/
 .contact{
     text-align: left;
     padding-left: 50px;

@@ -12,7 +12,7 @@ const Home = props => {
   };
 
     return (
-        <div className='item'>
+        <div className='item sizehome'>
             <div>
                 <div className="texthome"> 
                     <br/><br/><br/>MENTAL HEALTH
@@ -27,8 +27,8 @@ const Home = props => {
                     <br/><br/><button className='homebutton' onClick={navigateToCMental}>ทำแบบประเมิน</button>
                 </div>
             </div>
-            <div className="sizepic">
-                <br/><img src= {Image}/>
+            <div className='pichome'>
+                <br/><img src= {Image} className='pichome'/>
             </div>
         </div>
     );
