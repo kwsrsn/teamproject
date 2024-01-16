@@ -5,7 +5,7 @@ const Layout = ({children}) => {
         <div >
             
             <div>
-                <div >
+                <div style={{display: "flex", flexDirection: "column"}}>
                     <Navbar/>    
                     <div>
                         {children}
