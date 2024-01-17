@@ -7,16 +7,18 @@ const Contact = props => {
             <div className="texthead"> 
                 <p>ติดต่อสอบถาม/แจ้งปัญหาการใช้งาน</p>
             </div> 
-            <div>
-                <div className='contact'>
-                    0xx-xxx-xxxx<br/>คลินิค.....<br/>
-                    0xx-xxx-xxxx<br/>คลินิค.....
+            <div className='Contact-Report'>
+                <div className='contact0'>
+                    Contact
                 </div>
-                <div className='contact'>
-                    0xx-xxx-xxxx<br/>คลินิค.....<br/>
-                    0xx-xxx-xxxx<br/>คลินิค.....
+                <div className='report1'>
+                    Report problem<br/>
                 </div>
             </div> 
+            <div className='contact1'>
+                <br/>0xx-xxx-xxxx<br/>คลินิค.....<br/>
+                    0xx-xxx-xxxx<br/>คลินิค.....
+                </div>
         </div>
     );
 };

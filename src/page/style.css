@@ -161,8 +161,33 @@
 /**/
 /*contact*/
 /**/
-.contact{
-    text-align: left;
-    padding-left: 50px;
+.texthead{
+    height: 9px;
+    width:1250px;
+    text-align: center;
+    padding: 7.4rem;
+    font-size: 30px;
 
+}
+.contact0{
+    height:30px;
+    width:800px;
+    text-align: center;
+    font-size: 25px;
+    
+}
+.Contact-Report{
+    display:flex;
+    flex-direction: row;
+}
+.report1{
+    text-align: right;
+    width: 400px;
+    height: 30px;
+    font-size:25px;
+}
+.contact1{
+    text-align: center;
+    height: 6px;
+    width: 800px;
 }
