@@ -97,7 +97,9 @@
 /**/
 .item {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 2px;
+    grid-column-gap: 2px;
 }
 .picsize{
     margin-top: 120px;
@@ -111,20 +113,21 @@
     color: #273d5c;
 }
 .boxcover{
-    margin-top: 120px;
-    width: 600px;
-    background-color: #70B2F6;
+    margin-top: 150px;
+    width: 250px; 
+    background-color: #aec8e2;
     font-family: 'Kanit', sans-serif;
-    text-align: left;
+    text-align: center;
     color: white;
     padding: 10px;
+    margin-left: 20px;
 }
 .piccontent{
     margin-top: 20px;
     height: 100px;
     width: 170px;
     object-fit: cover;
-    float: left;
+    float: center;
     margin-left: 5px;  
 }
 .directionnews{
@@ -135,11 +138,14 @@
     
 }
 .boxcontent{
-    margin-top: 20px;
-    height: 2px;
-    background-color: #70B2F6;
-    width: 600px;
-    padding: 1px;
+    margin-top: 50px;
+    width: 250px; 
+    background-color: #aec8e2;
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    margin-left: 20px;
 }
 .scroll{
     display: flex;
@@ -149,6 +155,7 @@
 .newsleft{
     height: 100vh;
 }
+
 
 
 /**/
