@@ -4,20 +4,19 @@
 
 .navbar {
     position: fixed;
-    background: #374659;
-    height: 90px;
+    background: #ffffff;
+    height: 13vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 17px;
-    box-shadow: 1px 2px 5px lightgray;
     font-family: 'Kanit', sans-serif;
     
 }
 
 .logo {
-    color: #fff;
+    color: #374659;
     cursor: pointer;
     text-decoration: none;
     width: 700px;
@@ -45,20 +44,20 @@
 }
 
 .nav-links {
-    color: white;
+    color: #000000;
     text-decoration: none;
     padding: 8px 20px;
     transition: all 0.3s ease-out;
 }
 
 .nav-links:hover {
-    background-color: #ffffff;
-    color: #273d5c;
+    background-color: #52B788;
+    color: #ffffff;
     border-radius: 15px;
 }
 
 .fa-bars {
-    color: #fff;
+    color: #273d5c;
 }
 
 .nav-links-button {

@@ -15,66 +15,61 @@
 /*home*/
 /**/
 .texthome{
-    font-size: 55px;
+    font-size: 40px;
     font-weight:bold;
-    text-align: center;
-    color: #273d5c;
+    text-align: left;
+    color: #ffffff;
     font-family: 'PT Sans Narrow', sans-serif;
+    margin-left: 5%;
     /*border: 1px solid #273d5c;*/
 }
 .textcontent{
-    text-align: center; 
-    color: #273d5c;
+    text-align: left; 
+    color: #ffffff;
     font-family: 'Kanit', sans-serif;
-    display: grid;
-    place-items: center;
+    margin-left: 5%;
 }
 .sizehome{
     height: 100vh;
+    font-family: 'Kanit', sans-serif;
 }
 .homebutton{
-    background-color: #F4F4F4;
+    background-color: white;
     font-size: 15px;
-    color: #273d5c;
-    place-items: center;
-    height: 8vh;
-    width: 25vh;
+    color: #2660A4;
+    height: 6.5vh;
+    width: 20vh;
     font-family: 'Kanit', sans-serif;
-    border: 2px solid #273d5c;
+    border: 2px solid#2660A4;
     cursor: pointer;
+    margin-top: 25vh;
 }
 .homebutton:hover{
-    background-color: #273d5c;
+    background-color: #2660A4;
     color: white;
 }
 .pichome{
-    background: url("../img/pichome.jpg");
+    background: url("../img/pichome2.png");
     background-size: cover;
-    width: 96%;
-    height: 270px;
-    background-position: bottom;
-    margin-right: 2%;
-    margin-left: 2%;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-family: 'Kanit', sans-serif;
+    width: 98%;
+    height: 87vh;
+    background-position: center;
+    margin-left: 1%;
+    margin-top: 105px;
+    margin-bottom: 15px;
+    display: grid;
+    border-radius: 5px;
+    justify-items: center;
 }
 .circlehome{
-    height: 110px;
-    width: 110px;
-    border-radius: 100%;
-    background-color: white;
-    margin-top: 230px;
-    margin-left: 55px;
-    margin-right: 55px;
+    margin-top: 40px;
+    margin-left: 70px;
+    margin-right: 70px;
 }
 .picbox{
-    height: 90px;
-    width: 90px;
+    height: 70px;
+    width: 70px;
     margin: 10px;
-    border-radius: 100%;
 }
 .boxtext{
     padding-top: 10px;
@@ -85,10 +80,33 @@
     background-color: white;
 }
 .boxhome{
-    height: 300px;
+    height: 380px;
     width: 25%;
-    margin-top: 10px;
-
+    margin: 1.5%;
+    font-size: 17px;
+    font-weight: 500;
+}
+.homeitem{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 17px;
+}
+.picitem{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+.homecontent{
+    width: 98%;
+    height: 40px;
+    margin-left: 3%;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    text-align: left;
 }
 
 

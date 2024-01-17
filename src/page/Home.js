@@ -17,24 +17,55 @@ const Home = props => {
   };
 
     return (
-        <div className='sizehome' >
+        <div className='sizehome'>
             <div style={{display: "flex", flexDirection: "column"}}>
-            
-                <div>
-                    <div className="texthome" > 
-                        <br/><br/>MENTAL HEALTH
-                    </div>
-                    <div className='textcontent'>
-                    <br/>ภาวะจิตใจที่เป็นสุข สามารถปรับตัวแก้ปัญหา สร้างสรรค์ทำงานได้ <br/>
-                    มีความรู้สึกที่ดีต่อตนเองและผู้อื่น มีความมั่นคงทางจิตใจ มีวุฒิภาวะทางอารมณ์ <br/>
-                    อยู่ในสังคม และสิ่งแวดล้อมที่เปลี่ยนแปลงได้
-                    </div>
-                    <div>
-                        <br/><br/><button className='homebutton' onClick={navigateToCMental}>ทำแบบประเมิน</button>
-                    </div><br/><br/>
-                </div>
-
                 <div className='pichome'>
+                    <button className='homebutton' onClick={navigateToCMental}>ทำแบบประเมิน</button>
+                </div><br/>
+                <div className='homecontent'>
+                    คนไทยส่วนใหญ่ป่วยเป็นโรคทางจิตเวช อะไรบ้าง?
+                </div>
+                <div className='homeitem'>
+                    <div className='boxhome' style={{backgroundColor:"#647E88"}}>
+                        <img src= {Image} className='picitem'/>
+                        <br/><br/>โรคซึมเศร้า (Depression)<br/>
+                        <div className='boxtext'>
+                            โรคที่มีอารมณ์เศร้าลงและขาดแรงในการทำ<br/>
+                            กิจวัตรประจำวัน อาการอื่น ๆ ที่อาจเกิดขึ้น<br/>
+                            ได้รวมถึงความหดหู่ สูญเสียความสนใจ<br/>
+                            และปัญหาในการนอนหรืออาหาร
+                        </div>
+                    </div>
+                    <div className='boxhome' style={{backgroundColor:"#96C5CB"}}>
+                        <img src= {Image} className='picitem'/>
+                        <br/><br/>โรคจิตเภท (Schizophrenia)<br/>
+                        <div className='boxtext'>
+                        โรคที่มีอาการขาดสติ ความคิดผิดปกติ <br/>
+                        และการรับรู้เหตุการณ์ที่ผิดปกติ ผู้ป่วยอาจมีอาการ<br/>
+                        ทางการจิตอื่น ๆ เช่น การได้ยินเสียงหรือความคิด<br/>
+                        ผิดปกติ
+                        </div>
+                    </div>
+                    <div className='boxhome' style={{backgroundColor:"#647E88"}}>
+                        <img src= {Image} className='picitem'/>
+                        <br/><br/>โรควิตกกังวล (Anxiety)<br/>
+                        <div className='boxtext'>
+                        โรคที่เกี่ยวข้องกับอารมณ์ของความกังวล <br/>
+                        ผู้ป่วยอาจมีอาการหวาดกลัว กลัวสิ่งต่างๆ <br/>
+                        หรือมีอารมณ์ตึงเครียดเป็นระยะเวลานาน
+                        </div>
+                    </div>
+                    <div className='boxhome' style={{backgroundColor:"#96C5CB"}}>
+                        <img src= {Image} className='picitem'/>
+                        <br/><br/>โรคจิตเวชเนื่องมาจากสารเสพติด (Substance Induced Mental Illness)<br/>
+                        <div className='boxtext'>
+                        โรคที่เกิดขึ้นจากการใช้สารเสพติด เช่น ยาเสพติด<br/> 
+                        แอลกอฮอล์ หรือสารต่าง ๆ ที่ส่งผลให้เกิดอาการทางจิตเวช
+                        </div>
+                    </div>
+                </div>
+                
+                <div className='homeitem'>
                     <div>
                         <div className='circlehome'>
                             <img src= {body} className='picbox'/>
@@ -80,8 +111,6 @@ const Home = props => {
                         </div><br/>
                     </div>
                 </div>
-                
-                
             </div>
             
         </div>
@@ -89,14 +118,4 @@ const Home = props => {
 };
 export default Home
 
-                /*<div style={{display:"flex", flexDirection:"row"}}>
-                    <div className='boxhome' style={{backgroundColor:"#647E88"}}>
-
-                    </div>
-                    <div className='boxhome' style={{backgroundColor:"#6DA5AC"}}>
-                        
-                    </div>
-                    <div className='boxhome' style={{backgroundColor:"#96C5CB"}}>
-                        
-                    </div>
-                </div>*/
+/*,backgroundColor:"#374659"*/
