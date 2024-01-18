@@ -8,6 +8,7 @@ import Home from './page/Home.js';
 import Contact from './page/Contact.js';
 import Mentalhealth from './page/MentalHealth.js';
 import News from './page/News.js';
+import NineQ from './page/NineQ.js';
 
 function App() {
   return (
@@ -38,6 +39,12 @@ function App() {
                   path="/news"
                   element={
                     <Layout>< News /></Layout>
+                  }
+              />
+              <Route 
+                  path="/nineq"
+                  element={
+                    <Layout>< NineQ /></Layout>
                   }
               />
           </Routes>

@@ -243,6 +243,12 @@
     color: #273d5c;
     font-family: 'Kanit', sans-serif;
 }
+.texttopic{
+    cursor: pointer;
+}
+.texttopic:hover{
+    text-decoration-line: underline;
+}
 .textform{
     text-align: center; 
     color: #273d5c;
@@ -253,7 +259,7 @@
     /*place-items: left;*/
 }
 .question{
-    background-color: #abcae8;
+    background-color: #74d8aa;
     height: 50px;
     width: 65%;
     padding-top: 15px;
@@ -269,6 +275,14 @@
     font-family: 'Kanit', sans-serif;
     border: 2px solid #27495c;
     cursor: pointer;
+}
+.formbutton:hover{
+    background-color: #417a5e;
+    color: white;
+}
+.formbtnafter{
+    background-color: #417a5e;
+    color: white;
 }
 .inline {
     display: inline-block; 
