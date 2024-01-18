@@ -22,7 +22,7 @@ function Navbar() {
             <section>
                 
                 <nav className="navbar">
-                    <img src="/images/logonavbar.png" style={{ height: '80px', padding:'5px' }}/>
+                    <img src="/images/logonavbar.png" className='picnav'/>
                     
                     <Link to='/' className='logo'><i className='fas fa-home' /> PRELIMINARY MENTAL ASSESSMENT </Link>
 

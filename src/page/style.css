@@ -28,6 +28,8 @@
     color: #ffffff;
     font-family: 'Kanit', sans-serif;
     margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .sizehome{
     height: 100vh;
@@ -52,7 +54,7 @@
     background: url("../img/pichome2.png");
     background-size: cover;
     width: 98%;
-    height: 87vh;
+    height: 270px;
     background-position: center;
     margin-left: 1%;
     margin-top: 105px;
@@ -62,13 +64,13 @@
     justify-items: center;
 }
 .circlehome{
-    margin-top: 40px;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-top: 10px;
+    margin-left: 75px;
+    margin-right: 75px;
 }
 .picbox{
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     margin: 10px;
 }
 .boxtext{
@@ -85,6 +87,12 @@
     margin: 1.5%;
     font-size: 17px;
     font-weight: 500;
+    background-color: #273d5c ;
+    color: #ffffff;
+}
+.boxhome:hover{
+    background-color: #52B788;
+    color: #ffffff;
 }
 .homeitem{
     display: flex;
@@ -102,11 +110,26 @@
 .homecontent{
     width: 98%;
     height: 40px;
-    margin-left: 3%;
     font-size: 20px;
     font-weight: 500;
     color: rgb(0, 0, 0);
-    text-align: left;
+    text-align: center;
+    margin-top: 35px;
+    align-items: center;
+}
+.homehead{
+    display: flex;
+    flex-direction: row;
+    background-color: #273d5c;
+    height: 250px;
+    margin: 2%;
+    border-radius: 15px;
+}
+.picheadhome{
+    height: 250px;
+    width: 400px;
+    object-fit: cover;
+    margin-left: 3%;
 }
 
 
