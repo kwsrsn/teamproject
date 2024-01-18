@@ -209,3 +209,41 @@
     height: 6px;
     width: 800px;
 }
+
+/**/
+/*mentalhealth*/
+/**/
+.mentalhealth{
+    font-size: 40px;
+    font-weight:bold;
+    text-align: center;
+    color: #273d5c;
+    font-family: 'Kanit', sans-serif;
+}
+.textform{
+    text-align: center; 
+    color: #273d5c;
+    font-family: 'Kanit', sans-serif;
+    display: grid;
+    justify-items: center;
+    /*place-items: left;*/
+}
+.question{
+    background-color: #abcae8;
+    height: 50px;
+    width: 80%;
+}
+.formbutton{
+    background-color: #f6fef9;
+    font-size: 15px;
+    color: #27495c;
+    place-items: center;
+    height: 8vh;
+    width: 25vh;
+    font-family: 'Kanit', sans-serif;
+    border: 2px solid #27495c;
+    cursor: pointer;
+}
+.inline {
+    display: inline-block; 
+}
