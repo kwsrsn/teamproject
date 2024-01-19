@@ -3,11 +3,16 @@ import './style.css';
 import {useNavigate} from 'react-router-dom';
 
 import pichead from "../img/pichead.png";
-import Image from "../img/pic1.png";
 import body from "../img/body.png";
 import mood from "../img/mood.png";
 import heart from "../img/heart.png";
 import behavior from "../img/behavior.png";
+
+import Image1 from "../img/โรคซึมเศร้า.jpg";
+import Image2 from "../img/โรคจิตเภท.jpg";
+import Image3 from "../img/โรควิตกกังวล.jpeg";
+import Image4 from "../img/โรคจิตเภทสารเสพติด.jpg";
+
 
 const Home = props => {
 
@@ -96,7 +101,7 @@ const Home = props => {
                     <br/>
                     <div className='homeitem'>
                         <div className='boxhome'>
-                            <img src= {Image} className='picitem'/>
+                            <img src= {Image1} className='picitem'/>
                             <br/><br/>โรคซึมเศร้า (Depression)<br/>
                             <div className='boxtext'>
                             โรคที่มีอารมณ์เศร้าลงและขาดแรงในการทำ<br/>
@@ -106,7 +111,7 @@ const Home = props => {
                             </div>
                         </div>
                         <div className='boxhome'>
-                            <img src= {Image} className='picitem'/>
+                            <img src= {Image2} className='picitem'/>
                             <br/><br/>โรคจิตเภท (Schizophrenia)<br/>
                             <div className='boxtext'>
                             โรคที่มีอาการขาดสติ ความคิดผิดปกติ <br/>
@@ -116,7 +121,7 @@ const Home = props => {
                             </div>
                         </div>
                         <div className='boxhome'>
-                            <img src= {Image} className='picitem'/>
+                            <img src= {Image3} className='picitem'/>
                             <br/><br/>โรควิตกกังวล (Anxiety)<br/>
                             <div className='boxtext'>
                             โรคที่เกี่ยวข้องกับอารมณ์ของความกังวล <br/>
@@ -125,7 +130,7 @@ const Home = props => {
                             </div>
                         </div>
                         <div className='boxhome'>
-                            <img src= {Image} className='picitem'/>
+                            <img src= {Image4} className='picitem'/>
                             <br/><br/>โรคจิตเวชเนื่องมาจากสารเสพติด (Substance Induced Mental Illness)<br/>
                             <div className='boxtext'>
                             โรคที่เกิดขึ้นจากการใช้สารเสพติด เช่น ยาเสพติด<br/> 
@@ -135,10 +140,26 @@ const Home = props => {
                     </div>
                 </div>
 
-                <div style={{height:"25vh",backgroundColor:"#131A22"}}>
-                    <a href="http://medicalcenter.kmitl.ac.th/" target="_blank" rel="noopener noreferrer" style={{color:"white"}}> 
+                <div className='bottombox' style={{color:"white"}}>
+                    <div>
+                        ABOUT US
+                    </div>
+                    <div >
+                        CONTACT US<br/>
+                        <a href="http://medicalcenter.kmitl.ac.th/" target="_blank" rel="noopener noreferrer" className='bottomhome'> 
                         คลินิกเวชกรรม สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
-                    </a>
+                        </a>
+                    </div>
+
+                    <div style={{color:"white"}}>
+                        DEVELOPER<br/>
+                        <a href="/contact" rel="noopener noreferrer" className='bottomhome'> 
+                        ติดต่อสอบถาม/แจ้งปัญหา
+                        </a><br/>
+                        <a href="/contact" rel="noopener noreferrer" className='bottomhome'> 
+                        65010...@kmitl.ac.th
+                        </a>
+                    </div>
                 </div>
                 
                 
