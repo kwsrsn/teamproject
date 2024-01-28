@@ -9,6 +9,9 @@
     font-weight: bold;
 }
 
+*{
+    font-family: 'Kanit', sans-serif;
+}
 
 
 /**/
@@ -270,36 +273,26 @@
 /**/
 /*contact*/
 /**/
-.texthead{
-    height: 9px;
-    width:1250px;
-    text-align: center;
-    padding: 7.4rem;
-    font-size: 30px;
-
-}
 .contact0{
-    height:30px;
-    width:800px;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
+    width: 50%;
     
 }
 .Contact-Report{
     display:flex;
     flex-direction: row;
-}
-.report1{
-    text-align: right;
-    width: 400px;
-    height: 30px;
-    font-size:25px;
+    justify-content: center;
 }
 .contact1{
     text-align: center;
-    height: 6px;
-    width: 800px;
+    font-size: 15px;
 }
+.formcontact{
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: 2%;
+  }
 
 /**/
 /*mentalhealth*/
