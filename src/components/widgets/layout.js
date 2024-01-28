@@ -1,20 +1,16 @@
 import Navbar from './Navbar';
 
 const Layout = ({children}) => {
-    return(
-        <div >
-            
-            <div>
-                <div style={{display: "flex", flexDirection: "column"}}>
-                    <Navbar/>    
-                    <div>
-                        {children}
-                    </div>
+    return( 
+        <div>
+            <div className='navbarlay'>
+                <Navbar/>    
+                <div className='navbayout'>
+                    {children}
                 </div>
             </div>
-            
-            
         </div>
+            
     )
 }
 

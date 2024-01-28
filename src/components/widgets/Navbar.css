@@ -70,7 +70,7 @@
     padding: 5px;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 900px){
     .nav-side-menu {
         display: flex;
         flex-direction: column;
@@ -120,7 +120,7 @@
 
     .menu-icon {
         display: block;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         transform: translate(-100%, 60%);
@@ -136,12 +136,16 @@
 
     .nav-items {
         height: auto;
-        
-        
     }
 }
 
 .pic {
     width: 5vh;
     height: 5vh;
+}
+
+/*layout*/
+.navbarlay{
+    display: flex;
+    flex-direction: column;
 }
