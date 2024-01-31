@@ -47,7 +47,7 @@ const Mentalhealth = props => {
             
                 <div>
                     <div className='mentalhealth'> 
-                        <br/><br/>แบบประเมินโรคซึมเศร้าด้วย 9 คำถาม (9Q)
+                        <br/><br/>แบบประเมินโรคซึมเศร้าด้วย 9 (9Q)
                     </div> 
                     <div className='textform'>
                         <br/><p className='question'>&emsp;&emsp;1.&emsp;เบื่อ ไม่สนใจอยากทำอะไร</p><br/>
