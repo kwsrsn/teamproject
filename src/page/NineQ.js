@@ -40,7 +40,7 @@ class MyButton extends React.Component {
 //       );
 //     };
 
-const Mentalhealth = props => {
+const NineQ = props => {
     return (
         <div className='sizepage' >
             <div style={{display: "flex", flexDirection: "column"}}>
@@ -76,4 +76,4 @@ const Mentalhealth = props => {
     );
 };
 
-export default Mentalhealth
+export default NineQ

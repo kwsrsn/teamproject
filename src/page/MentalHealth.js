@@ -9,6 +9,9 @@ const Mentalhealth = props => {
     const navigateTo9Q = () => {
     navigate('/nineq');
     };
+    const navigateTo8Q = () => {
+        navigate('/eightq');
+        };
 
     return (
         <div className='sizepage' >
@@ -20,7 +23,7 @@ const Mentalhealth = props => {
                     </div> 
                     <div className='textform'>
                         <br/><p className='texttopic' onClick={navigateTo9Q}>แบบประเมินโรคซึมเศร้าด้วย 9 คำถาม (9Q)</p>
-                        <br/><p className='texttopic' onClick={navigateTo9Q}>แบบประเมินการฆ่าตัวตาย 8 คำถาม (8Q)</p>
+                        <br/><p className='texttopic' onClick={navigateTo8Q}>แบบประเมินการฆ่าตัวตาย 8 คำถาม (8Q)</p>
                         <br/><p className='texttopic' onClick={navigateTo9Q}>แบบประเมินความสุขคนไทย</p>
                         <br/><p className='texttopic' onClick={navigateTo9Q}>แบบวัดความเครียด กรมสุขภาพจิต (SPST - 20)</p>
                     </div> 
