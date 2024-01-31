@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css'
 import mail from "../components/widgets/pic/mail.png";
 import phone from "../components/widgets/pic/phone.png";
+import location from "../img/location.png"
 
 const Contact = props => {
     return (
@@ -31,8 +32,11 @@ const Contact = props => {
                                 </div>  
                         
                                 <div className='contactrow'>
+                                <div>
+                                <img src={location} className='piclocation'/> 
+                                </div>
                                     <div style={{width:"75px"}}>
-                                        ที่ตั้ง
+                                        ที่ตั้ง 
                                     </div>
                                     <div>
                                         สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง <br/>
