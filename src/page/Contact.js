@@ -2,7 +2,8 @@ import React from 'react';
 import './style.css'
 import mail from "../components/widgets/pic/mail.png";
 import phone from "../components/widgets/pic/phone.png";
-import location from "../img/location.png"
+import location from "../img/location.png";
+import call from "../img/call.png";
 
 const Contact = props => {
     return (
@@ -22,12 +23,12 @@ const Contact = props => {
                             <div>
                                 <div className='contactrow'>
                                     <div style={{width:"75px"}}>
-                                        เปิดทำการ
+                                        &emsp;เปิดทำการ
                                     </div>
                                     <div>
-                                        จันทร์ - ศุกร์ เวลา 09:00 น. - 17:00 น.<br/>
-                                        เสาร์ - อาทิตย์ เวลา 09.00 น. - 11.00 น.<br/>
-                                        วันหยุดนักขัตฤกษ์ เวลา 09:00 น. - 17:00 น.
+                                       &emsp;&emsp;&emsp;จันทร์ - ศุกร์ เวลา 09:00 น. - 17:00 น.<br/>
+                                       &emsp;&emsp;&emsp;เสาร์ - อาทิตย์ เวลา 09.00 น. - 11.00 น.<br/>
+                                       &emsp;&emsp;&emsp;วันหยุดนักขัตฤกษ์ เวลา 09:00 น. - 17:00 น.
                                     </div>
                                 </div>  
                         
@@ -36,20 +37,23 @@ const Contact = props => {
                                 <img src={location} className='piclocation'/> 
                                 </div>
                                     <div style={{width:"75px"}}>
-                                        ที่ตั้ง 
+                                        &emsp;ที่ตั้ง 
                                     </div>
                                     <div>
-                                        สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง <br/>
-                                        เลขที่ 1 ฉลองกรุง 1 เขตลาดกระบัง กรุงเทพมหานคร 10520
+                                    &emsp;สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง <br/>
+                                    &emsp;เลขที่ 1 ฉลองกรุง 1 เขตลาดกระบัง กรุงเทพมหานคร 10520
                                     </div>
                                 </div>    
                                 <div className='contactrow'>
+                                <div>
+                                <img src={call} classname='picphone' style={{ height:"25px",width:"25px"}}/>
+                                </div>
                                     <div style={{width:"75px"}}>
-                                        โทรศัพท์
+                                    &emsp;โทรศัพท์
                                     </div>
                                     <div>
-                                        02 329 8143 <br/>
-                                        02 329 8000 ต่อ 3633<br/><br/>
+                                        &emsp;02 329 8143 <br/>
+                                        &emsp;02 329 8000 ต่อ 3633<br/><br/>
                                     </div>
                                 </div>
                             </div>
