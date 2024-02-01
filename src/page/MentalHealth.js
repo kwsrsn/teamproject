@@ -20,7 +20,7 @@ const Mentalhealth = props => {
     };
 
     return (
-        <div className='sizepage' >
+        <div className='sizepage' style={{height:"100vh"}}>
             <div style={{display: "flex", flexDirection: "column"}}>
             
                 <div>

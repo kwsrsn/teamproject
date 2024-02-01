@@ -55,9 +55,9 @@ const Layout = ({children}) => {
                         แบบประเมินสุขภาพจิต<br/>
                         <div className='bottomtexthome'>
                             <br/><a href="/nineq" rel="noopener noreferrer" className='bottomhome'> แบบประเมินโรคซึมเศร้าด้วย 9 คำถาม (9Q) </a><br/>
-                            <a href="/contact" rel="noopener noreferrer" className='bottomhome'> แบบประเมินการฆ่าตัวตาย 8 คำถาม (8Q) </a><br/>
-                            <a href="/contact" rel="noopener noreferrer" className='bottomhome'> แบบประเมินความสุขคนไทย </a><br/>
-                            <a href="/contact" rel="noopener noreferrer" className='bottomhome'> แบบวัดความเครียด กรมสุขภาพจิต (SPST - 20) </a>
+                            <a href="/eightq" rel="noopener noreferrer" className='bottomhome'> แบบประเมินการฆ่าตัวตาย 8 คำถาม (8Q) </a><br/>
+                            <a href="/happy" rel="noopener noreferrer" className='bottomhome'> แบบประเมินความสุขคนไทย </a><br/>
+                            <a href="/stress" rel="noopener noreferrer" className='bottomhome'> แบบวัดความเครียด กรมสุขภาพจิต (SPST - 20) </a>
                         </div>
                     </div>
                 </div>

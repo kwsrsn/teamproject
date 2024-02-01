@@ -1,27 +1,70 @@
-import React from 'react';
+import React,{useState, useEffect}  from 'react';
 import './style.css';
-import useState from 'react';
 
-class MyButton extends React.Component {
-    handleClick() {
-      alert('Button Clicked!');
-    }
+const MyButton = ({ sharedScore, setSharedScore, questionId}) => {
+
+    const [selectedButton, setSelectedButton] = useState(null);
+    const [previousSelectedButton, setPreviousSelectedButton] = useState(null);
   
-    render() {
+  
+    const buttonData = [
+      { id: 1, value: 0 , name: '1'},
+      { id: 2, value: 1 , name: '2'},
+      { id: 3, value: 2 , name: '3'},
+      { id: 4, value: 3 , name: '4'},
+      { id: 5, value: 4 , name: '5'},
+      // Add more buttons as needed
+    ];
+  
+  
+    const handleButtonClick = (button) => {
+      if (selectedButton === button.id) {
+        // ถ้าปุ่มที่ถูกคลิกเป็นปุ่มที่ถูกเลือกอยู่แล้ว
+        setSelectedButton(null);
+        setPreviousSelectedButton(null);
+        setSharedScore(sharedScore - button.value);
+      } else {
+        // ถ้ามีปุ่มที่ถูกเลือกอยู่แล้ว ให้ลบค่าของปุ่มเดิมออก
+        if (selectedButton !== null) {
+          setSharedScore((prevScore) => prevScore - previousSelectedButton.value);
+        }
+  
+        setSelectedButton(button.id);
+        setPreviousSelectedButton(button);
+        setSharedScore((prevScore) => prevScore + button.value);
+      }
+    };
+  
+    useEffect(() => {
+      console.log('Total', sharedScore);
+    }, [sharedScore]);
+  
       return (
-        <div class="inline">
-            <button className='buttonstress' onClick={this.handleClick}>1</button>&emsp;&emsp;&emsp;
-            <button className='buttonstress' onClick={this.handleClick}>2</button>&emsp;&emsp;&emsp;
-            <button className='buttonstress' onClick={this.handleClick}>3</button>&emsp;&emsp;&emsp;
-            <button className='buttonstress' onClick={this.handleClick}>4</button>&emsp;&emsp;&emsp;
-            <button className='buttonstress' onClick={this.handleClick}>5</button>
-        </div>
-      );
-    }
-  };
+          <div class="inline">
+            
+            {buttonData.map((button) => (
+          <button
+            key={button.id}
+            onClick={() => handleButtonClick(button)}
+            className="buttonstress"
+            style={{
+                marginLeft:"30px", marginRight:"30px",
+              backgroundColor: selectedButton === button.id ? '#417a5e' : '#f6fef9',
+              color: selectedButton === button.id ? '#f6fef9' : '#27495c',
+            }}
+          >
+            {button.name}
+          </button>
+        ))}
+          </div>
+        );
+      };
+
+       
 
 
 const Stress = props => {
+    const [sharedScore, setSharedScore] = useState(0);
     return (
         <div className='sizepage' >
             <div style={{display: "flex", flexDirection: "column"}}>
@@ -39,45 +82,65 @@ const Stress = props => {
                     </div>
                     <div className='textform'>
                         <br/><p className='question'>&emsp;&emsp;1.&emsp;กลัวทำงานผิดพลาด</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={1}/>
+
                         <br/><p className='question'>&emsp;&emsp;2.&emsp;ไปไม่ถึงเป้าหมายที่วางไว้</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={2}/>
+
                         <br/><p className='question'>&emsp;&emsp;3.&emsp;ครอบครัวมีความขัดแย้งกันในเรื่องเงินหรือเรื่องงานในบ้าน</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={3}/>
+
                         <br/><p className='question'>&emsp;&emsp;4.&emsp;เป็นกังวลกับเรื่องสารพิษหรือมลภาวะในอากาศ น้ำ เสียง และดิน</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={4}/>
+
                         <br/><p className='question'>&emsp;&emsp;5.&emsp;รู้สึกว่าต้องแข่งขันหรือเปรียบเทียบ</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={5}/>
+
                         <br/><p className='question'>&emsp;&emsp;6.&emsp;เงินไม่พอใช้จ่าย</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={6}/>
+
                         <br/><p className='question'>&emsp;&emsp;7.&emsp;กล้ามเนื้อตึงหรือปวด</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={7}/>
+
                         <br/><p className='question'>&emsp;&emsp;8.&emsp;ปวดหัวจากความตึงเครียด</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={8}/>
+
                         <br/><p className='question'>&emsp;&emsp;9.&emsp;ปวดหลัง</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={9}/>
+
                         <br/><p className='question'>&emsp;&emsp;10.&emsp;ความอยากอาหารเปลี่ยนแปลง</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={10}/>
+
                         <br/><p className='question'>&emsp;&emsp;11.&emsp;ปวดศีรษะข้างเดียว</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={11}/>
+
                         <br/><p className='question'>&emsp;&emsp;12.&emsp;รู้สึกวิตกกังวล</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={12}/>
+
                         <br/><p className='question'>&emsp;&emsp;13.&emsp;รู้สึกคับข้องใจ</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={13}/>
+
                         <br/><p className='question'>&emsp;&emsp;14.&emsp;รู้สึกโกรธ หรือหงุดหงิด</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={14}/>
+
                         <br/><p className='question'>&emsp;&emsp;15.&emsp;รู้สึกเศร้า</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={15}/>
+
                         <br/><p className='question'>&emsp;&emsp;16.&emsp;ความจำไม่ดี</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={16}/>
+
                         <br/><p className='question'>&emsp;&emsp;17.&emsp;รู้สึกสับสน</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={17}/>
+
                         <br/><p className='question'>&emsp;&emsp;18.&emsp;ตั้งสมาธิลำบาก</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={18}/>
+
                         <br/><p className='question'>&emsp;&emsp;19.&emsp;รู้สึกเหนื่อยง่าย</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={19}/>
+
                         <br/><p className='question'>&emsp;&emsp;20.&emsp;เป็นหวัดบ่อย ๆ</p><br/>
-                        <MyButton />
+                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={20}/>
+
                         <br/>
                     </div> 
                 </div>
