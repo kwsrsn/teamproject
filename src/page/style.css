@@ -336,3 +336,26 @@
 .sizepage{ 
     background-repeat: repeat;
 }
+.buttonstress{
+    background-color: #f6fef9;
+    font-size: 15px;
+    color: #27495c;
+    place-items: center;
+    height: 8vh;
+    width: 15vh;
+    font-family: 'Kanit', sans-serif;
+    border: 2px solid #27495c;
+    cursor: pointer;
+}
+.buttonstress:hover{
+    background-color: #417a5e;
+    color: white;
+}
+.textstress{
+    text-align: left; 
+    color: #273d5c;
+    font-family: 'Kanit', sans-serif;
+    display: grid;
+    justify-items: center;
+    font-size: 20px;
+}
