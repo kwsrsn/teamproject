@@ -4,6 +4,8 @@ import mail from "../components/widgets/pic/mail.png";
 import phone from "../components/widgets/pic/phone.png";
 import location from "../img/location.png";
 import call from "../img/call.png";
+import backgroundcon from "../img/contact11111.jpg";
+import backdeveloper from "../img/Developer.jpg";
 
 const Contact = props => {
     return (
@@ -16,7 +18,8 @@ const Contact = props => {
                 <div className='contact0'>
                     <br/>Contact
                     <div className='contactrow' style={{justifyContent:"center"}}>
-                        <div style={{width:"40%", backgroundColor:"white", marginRight:"15px",padding:"10px"}}>
+                        <div>
+                            <img src={backgroundcon} className='backgroundcon'/> 
                             <div className='contact1'>
                                 คลินิกเวชกรรม สจล. คณะแพทยศาสตร์
                             </div>
@@ -60,7 +63,8 @@ const Contact = props => {
                         </div>
                         
                     
-                        <div style={{width:"40%", backgroundColor:"white", marginLeft:"15px",padding:"10px"}}>
+                        <div>
+                         <img src={backdeveloper} className='backdeve'/>
                             <div className='contact1'>
                                 Developer
                             </div>

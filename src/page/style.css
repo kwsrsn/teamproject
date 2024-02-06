@@ -296,6 +296,15 @@
     height: 27px;
     background: url(../img/location.png);
 }
+.backgroundcon{
+    width: 80%;
+    margin-left: 15%;
+}
+
+.backdeve{
+    width: 80%;
+    margin-left: 5%;
+}
 
 
 /**/
