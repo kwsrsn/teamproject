@@ -9,7 +9,6 @@ import Contact from './page/Contact.js';
 import Mentalhealth from './page/MentalHealth.js';
 import News from './page/News.js';
 import NineQ from './page/NineQ.js';
-import EightQ from './page/EightQ.js';
 import Happy from './page/happy.js';
 import Stress from './page/Stress.js';
 
@@ -49,12 +48,6 @@ function App() {
                   path="/nineq"
                   element={
                     <Layout>< NineQ /></Layout>
-                  }
-              />
-              <Route 
-                  path="/eightq"
-                  element={
-                    <Layout>< EightQ /></Layout>
                   }
               />
               <Route 

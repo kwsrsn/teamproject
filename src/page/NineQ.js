@@ -39,7 +39,7 @@ const MyButton = ({ sharedScore, setSharedScore, questionId}) => {
   }, [sharedScore]);
 
     return (
-        <div class="inline">
+        <div>
           
           {buttonData.map((button) => (
         <button
@@ -48,8 +48,8 @@ const MyButton = ({ sharedScore, setSharedScore, questionId}) => {
           className="formbutton"
           style={{
             marginLeft:"30px", marginRight:"30px",
-            backgroundColor: selectedButton === button.id ? '#417a5e' : '#f6fef9',
-            color: selectedButton === button.id ? '#f6fef9' : '#27495c',
+            backgroundColor: selectedButton === button.id ? '#fce58e' : '#f6fef9',
+            color: selectedButton === button.id ? '#27495c' : '#27495c',
           }}
         >
           {button.name}
@@ -58,6 +58,12 @@ const MyButton = ({ sharedScore, setSharedScore, questionId}) => {
         </div>
       );
     };
+
+// const handleAddScore = props => {
+//   const [sharedScore, setSharedScore] = useState(0);
+//   return(
+//   alert('คะแนนของคุณ: ' (sharedScoreScore)););
+// };
 
 const Mentalhealth = props =>{
   const [sharedScore, setSharedScore] = useState(0);
@@ -98,8 +104,8 @@ const Mentalhealth = props =>{
                         <br/><p className='question'>&emsp;&emsp;9.&emsp;คิดทำร้ายตนเอง หรือคิดว่าถ้าตายไปคงจะดี</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={9}/>
                         
-                        <br/>
-                    </div> 
+                        <br/><br/><button className='resultbtn'>Submit</button>
+                    </div>
                 </div>
             </div>
         </div>

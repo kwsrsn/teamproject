@@ -49,8 +49,8 @@ const MyButton = ({ sharedScore, setSharedScore, questionId}) => {
             className="buttonstress"
             style={{
                 marginLeft:"30px", marginRight:"30px",
-              backgroundColor: selectedButton === button.id ? '#417a5e' : '#f6fef9',
-              color: selectedButton === button.id ? '#f6fef9' : '#27495c',
+                backgroundColor: selectedButton === button.id ? '#9de2c0' : '#f6fef9',
+                color: selectedButton === button.id ? '#27495c' : '#27495c',
             }}
           >
             {button.name}
@@ -141,7 +141,7 @@ const Stress = props => {
                         <br/><p className='question'>&emsp;&emsp;20.&emsp;เป็นหวัดบ่อย ๆ</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={20}/>
 
-                        <br/>
+                        <br/><br/><button className='resultbtn'>Submit</button>
                     </div> 
                 </div>
             </div>

@@ -13,82 +13,82 @@ import{Link} from 'react-router-dom';
 const News = props => {
     return (
         <div className='item'> 
-            <div className='boxcover'>
-                <div>
-                    <a  style={{textDecoration: 'none'}} className="custom-link" href="https://health-articles.my.canva.site/broken-heart-syndrome">
+            <a  style={{textDecoration: 'none'}} className="custom-link" href="https://health-articles.my.canva.site/broken-heart-syndrome">
+                <div className='boxcover'>
+                    <div>
                         <img src={Image1} className='piccontent'/>
                         <br/>
                         “Broken-heart Syndrome”
                         <br/>
                         โรคหัวใจที่มีผลจากความเครียด   
-                    </a>
-                </div>       
-            </div>
-            <div className='boxcover'>
-                <div>
-                    <a  style={{textDecoration: 'none'}} className="custom-link" href="https://health-articles.my.canva.site/children-mental-health">
+                    </div>       
+                </div>
+            </a>
+            <a  style={{textDecoration: 'none'}} className="custom-link" href="https://health-articles.my.canva.site/children-mental-health">
+                <div className='boxcover'>
+                    <div>
                         <img src={Image2} className='piccontent'/>
                         <br/>
                         ปัญหาสุขภาพจิตเด็กสังเกตอย่างไร
-                    </a>
+                    </div>
                 </div>
-            </div>
-            <div className='boxcover'>
-                <div>
-                    <a  style={{textDecoration: 'none'}} className="custom-link" href="https://health-articles.my.canva.site/neck-shoulder-pain">
+            </a>
+            <a  style={{textDecoration: 'none'}} className="custom-link" href="https://health-articles.my.canva.site/neck-shoulder-pain">
+                <div className='boxcover'>
+                    <div>
                         <img src={Image3} className='piccontent'/>
                         <br/>
                         ปวดเมื่อยคอ บ่า ไหล่
                         <br/>
                         สัญญานเตือน โรคหมอนรองกระดูกคอ
-                    </a>
+                    </div>
                 </div>
-            </div>
-            <div className='boxcover'>
-                <div>
-                    <a  style={{textDecoration: 'none'}} className="custom-link" href="https://health-articles.my.canva.site/dusk-mites-allergy">
+            </a>
+            <a  style={{textDecoration: 'none'}} className="custom-link" href="https://health-articles.my.canva.site/dusk-mites-allergy">
+                <div className='boxcover'>
+                    <div>
                         <img src={Image4} className='piccontent'/>
                         <br/>
-                        ภูมิแพ้ตัวไรในฝุ่น
-                    </a>
+                        ภูมิแพ้ตัวไรในฝุ่น   
+                    </div>
                 </div>
-            </div>
-            <div className='boxcontent'>
-                <div>
-                    <a  style={{textDecoration: 'none'}} className="custom-link" href="https://health-articles.my.canva.site/reason-to-get-more-sleep">
+            </a>
+            <a  style={{textDecoration: 'none'}} className="custom-link" href="https://health-articles.my.canva.site/broken-heart-syndrome">
+                <div className='boxcontent'>
+                    <div>
                         <img src={Image5} className='piccontent'/>
                         <br/>
                         5 คุณประโยชน์ของการนอนที่ดี
-                    </a>
+                    </div>
                 </div>
-            </div>
-            <div className='boxcontent'>
-                <div>
-                    <a  style={{textDecoration: 'none'}} className="custom-link" href="https://health-article.my.canva.site/sleepy-during-the-day">
+            </a>
+            <a  style={{textDecoration: 'none'}} className="custom-link" href="https://health-article.my.canva.site/sleepy-during-the-day">
+                <div className='boxcontent'>
+                    <div>
                         <img src={Image6} className='piccontent'/>
                         <br/>
                         อาการง่วงนอนมากผิดปกติในเวลากลางวัน
-                    </a>
+                    </div>
                 </div>
-            </div>
-            <div className='boxcontent'>
-                <div>
-                    <a  style={{textDecoration: 'none'}} className="custom-link" href="https://health-article.my.canva.site/menstruation">
+            </a>
+            <a  style={{textDecoration: 'none'}} className="custom-link" href="https://health-article.my.canva.site/menstruation">
+                <div className='boxcontent'>
+                    <div>
                         <img src={Image7} className='piccontent'/>
                         <br/>
                         ประจำเดือนแบบไหนไม่ปกติ
-                    </a>
-                </div>
-            </div>
-            <div className='boxcontent'>
-                <div>
-                        <a  style={{textDecoration: 'none'}} className="custom-link" href="https://health-article.my.canva.site/blood-sugar-and-exercise">
-                            <img src={Image8} className='piccontent'/>
-                            <br/>
-                            ระดับน้ำตาลในเลือดกับการออกกำลังกาย
-                        </a>
                     </div>
-            </div>
+                </div>
+            </a>
+            <a  style={{textDecoration: 'none'}} className="custom-link" href="https://health-article.my.canva.site/blood-sugar-and-exercise">
+                <div className='boxcontent'>
+                    <div>    
+                        <img src={Image8} className='piccontent'/>
+                        <br/>
+                        ระดับน้ำตาลในเลือดกับการออกกำลังกาย
+                    </div>
+                </div>
+            </a>
         </div>
     );
 };

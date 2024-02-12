@@ -9,9 +9,6 @@ const Mentalhealth = props => {
     const navigateTo9Q = () => {
     navigate('/nineq');
     };
-    const navigateTo8Q = () => {
-        navigate('/eightq');
-    };
     const navigateToHappy = () => {
         navigate('/happy');
     };
@@ -20,21 +17,30 @@ const Mentalhealth = props => {
     };
 
     return (
+        <div className='mentalhealthbg'>Mentalhealth
         <div className='sizepage' style={{height:"100vh"}}>
             <div style={{display: "flex", flexDirection: "column"}}>
             
                 <div>
                     <div className='mentalhealth'> 
-                        <br/><br/>แบบประเมินสุขภาพจิต
+                        <br/><br/>แบบประเมินสุขภาพจิต<br/>
                     </div> 
-                    <div className='textform'>
-                        <br/><p className='texttopic' onClick={navigateTo9Q}>แบบประเมินโรคซึมเศร้าด้วย 9 คำถาม (9Q)</p>
-                        <br/><p className='texttopic' onClick={navigateTo8Q}>แบบประเมินการฆ่าตัวตาย 8 คำถาม (8Q)</p>
-                        <br/><p className='texttopic' onClick={navigateToHappy}>แบบประเมินความสุขคนไทย</p>
-                        <br/><p className='texttopic' onClick={navigateToStress}>แบบวัดความเครียด กรมสุขภาพจิต (SPST - 20)</p>
-                    </div> 
+                    <div className='topic'>
+                        <div className='textform'>
+                            <div className='topicbox'>
+                                <p onClick={navigateTo9Q}><span>แบบประเมินโรคซึมเศร้าด้วย 9 คำถาม (9Q)</span></p>
+                            </div>
+                            <div className='topicbox'>
+                                <p onClick={navigateToHappy}><span>แบบประเมินความสุขคนไทย</span></p>
+                            </div>
+                            <div className='topicbox'>
+                                <p onClick={navigateToStress}><span>แบบวัดความเครียด กรมสุขภาพจิต (SPST - 20)</span></p>
+                            </div>
+                        </div> 
+                    </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 };
