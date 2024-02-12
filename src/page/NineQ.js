@@ -1,5 +1,6 @@
 import React,{useState, useEffect}  from 'react';
 import './style.css';
+import { findByLabelText } from '@testing-library/react';
 
 const MyButton = ({ sharedScore, setSharedScore, questionId}) => {
 
@@ -39,7 +40,7 @@ const MyButton = ({ sharedScore, setSharedScore, questionId}) => {
   }, [sharedScore]);
 
     return (
-        <div>
+        <div class="inline">
           
           {buttonData.map((button) => (
         <button
@@ -48,8 +49,8 @@ const MyButton = ({ sharedScore, setSharedScore, questionId}) => {
           className="formbutton"
           style={{
             marginLeft:"30px", marginRight:"30px",
-            backgroundColor: selectedButton === button.id ? '#fce58e' : '#f6fef9',
-            color: selectedButton === button.id ? '#27495c' : '#27495c',
+            backgroundColor: selectedButton === button.id ? '#417a5e' : '#f6fef9',
+            color: selectedButton === button.id ? '#f6fef9' : '#27495c',
           }}
         >
           {button.name}
@@ -59,19 +60,71 @@ const MyButton = ({ sharedScore, setSharedScore, questionId}) => {
       );
     };
 
-// const handleAddScore = props => {
-//   const [sharedScore, setSharedScore] = useState(0);
-//   return(
-//   alert('คะแนนของคุณ: ' (sharedScoreScore)););
-// };
+
 
 const Mentalhealth = props =>{
+  const [message, setMessage] = useState(0);
   const [sharedScore, setSharedScore] = useState(0);
+  const [detail, setdetail] = useState(0);
+  const [colortext, setColor] = useState(0);
+  const [showAssessment, setShowAssessment] = useState(false);
+
+  const calscore = () => {
+    console.log(sharedScore);
+    if (sharedScore < 7) {
+      setMessage('ระดับน้อยมาก')
+      setdetail('ไม่มีอาการของโรคซึมเศร้าหรือมีอาการของโรคซึมเศร้า')
+      setColor('#52B788')
+    }
+    else if (sharedScore <= 12){
+      setMessage('ระดับน้อย')
+      setdetail('มีอาการของโรคซึมเศร้า ')
+      setColor('#83B752')
+    }
+    else if (sharedScore <= 18){
+      setMessage('ระดับปานกลาง')
+      setdetail('มีอาการของโรคซึมเศร้า ')
+      setColor('#E39113')
+    }
+    else{
+      setMessage('ระดับรุนแรง')
+      setdetail('มีอาการของโรคซึมเศร้า ')
+      setColor('#ED1D1D')
+    }
+    setShowAssessment(true);
+  };
+  useEffect(() => {
+    console.log(message);
+  }, [message]);
+  useEffect(() => {
+    console.log(detail);
+  }, [detail]);
+  useEffect(() => {
+    console.log(colortext);
+  }, [colortext]);
+
 
     return (
         <div className='sizepage' >
-            <div style={{display: "flex", flexDirection: "column"}}>
+
+            {showAssessment ? (
+              <div style={{height:"100vh"}}>
+                
+                <br/><br/><br/><br/><span className="close" onClick={() => (setShowAssessment(false))}>&times;</span>
+                <br/>
+                <div className='popup'>
+                  <div className='mentalhealth'>
+                    ผลการประเมิน
+                  </div>
+                  <div>
+                    <br/><br/>{detail}<div style={{color:colortext}}>{message}</div>
+                  </div>
+                </div>
+              </div>
+                
             
+            ) : (
+              <div style={{display: "flex", flexDirection: "column"}}>
                 <div>
                     <div className='mentalhealth'> 
                         <br/><br/>แบบประเมินโรคซึมเศร้าด้วย 9 คำถาม (9Q)
@@ -104,11 +157,13 @@ const Mentalhealth = props =>{
                         <br/><p className='question'>&emsp;&emsp;9.&emsp;คิดทำร้ายตนเอง หรือคิดว่าถ้าตายไปคงจะดี</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={9}/>
                         
-                        <br/><br/><button className='resultbtn'>Submit</button>
-                    </div>
+                        <br/><br/><button className='resultbtn' onClick={calscore}>ประเมินผล</button>
+                    </div> 
                 </div>
+              </div>
+            )}
             </div>
-        </div>
+        
     );
     
 };

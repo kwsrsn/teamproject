@@ -455,3 +455,24 @@
 .resultbtn:hover{
     box-shadow: 0 15px 35px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+.close{
+    float: right;
+    text-align: right;
+    cursor: pointer;
+    font-size: 40px;
+    padding-right: 12%;
+}
+.popup{
+    text-align: center; 
+    align-content: center;
+    color: #273d5c;
+    font-family: 'Kanit', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    font-size: 17px;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: #f6fef9;
+    padding: 5%;
+}
