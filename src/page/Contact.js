@@ -110,7 +110,7 @@ const Contact = props => {
                                 />
                             </label><br/>
 
-                            <input type="submit" value="Submit" />
+                            <button classname="btn btn-success"> Submit </button>
                         </form>
                     </div>
                 </div>
