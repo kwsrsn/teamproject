@@ -96,10 +96,7 @@
     background-color: #273d5c ;
     color: #ffffff;
 }
-.boxhome:hover{
-    background-color: #52B788;
-    color: #ffffff;
-}
+
 .homeitem{
     display: flex;
     flex-direction: row;
