@@ -176,9 +176,11 @@
 .item {
     display: grid;
     grid-template-columns: 24% 24% 24% 24%;
-    grid-row-gap: 0.3px;
-    grid-column-gap: 1px;
+    grid-row-gap: 0.3%;
+    grid-column-gap: 0.3%;
     justify-content: center;
+    margin-left: 0.75%;
+    margin-right: 0.75%;
 
 }
 .picsize{
