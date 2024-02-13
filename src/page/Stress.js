@@ -64,12 +64,69 @@ const MyButton = ({ sharedScore, setSharedScore, questionId}) => {
 
 
 const Stress = props => {
-    const [sharedScore, setSharedScore] = useState(0);
+  const [message, setMessage] = useState(0);
+  const [detail, setdetail] = useState(0);
+  const [colortext, setColor] = useState(0);
+  const [sharedScore, setSharedScore] = useState(0);
+  const [showAssessment, setShowAssessment] = useState(false);
+
+  const calscore = () => {
+    console.log(sharedScore);
+    if (sharedScore <= 23) {
+      setMessage('ท่านมีความเครียดอยู่ในระดับน้อย')
+      setdetail('และหายไปได้ในระยะเวลาสั้น ๆ เป็นความเครียดที่เกิดขึ้นได้ในชีวิตประจำวันและสามารถปรับตัวกับสถานการณ์ต่าง ๆ ได้อย่างเหมาะสม ความเครียดในระดับนี้ถือว่ามีประโยชน์ในการดำเนินชีวิตประจำวัน เป็นแรงจูงใจในที่นำไปสู่ความสำเร็จในชีวิตได้')
+      setColor('#52B788')
+    }
+    else if (sharedScore <= 41){
+      setMessage('ท่านมีความเครียดในระดับปานกลาง')
+      setdetail('เกิดขึ้นได้ในชีวิตประจำวันเนื่องจากมีสิ่งคุกคามหรือ เหตุการณ์ที่ทำให้เครียด อาจรู้สึกวิตกกังวลหรือกลัว ถือว่าอยู่ในเกณฑ์ปกติ ความเครียดระดับนี้ไม่ก่อให้เกิดอันตรายหรือเป็นผลเสียต่อการดำเนินชีวิต ท่านสามารถผ่อนคลายความเครียดด้วยการทำกิจกรรมที่เพิ่มพลัง เช่น ออกกำลังกาย เล่นกีฬา ทำสิ่งที่สนุกสนานเพลิดเพลิน เช่น ฟังเพลง อ่านหนังสือ ทำงานอดิเรก หรือพูดคุยระบายความไม่สบายใจกับผู้ที่ไว้วางใจ')
+      setColor('#83B752')
+    }
+    else if (sharedScore <= 61){
+      setMessage('ท่านมีความเครียดในระดับสูง ')
+      setdetail('เป็นระดับที่ท่านได้รับความเดือนร้อนจากสิ่งต่าง ๆ หรือเหตุการณ์รอบตัว ทำให้วิตกกังวล กลัว รู้สึกขัดแย้งหรืออยู่ในสถานการณ์ที่แก้ไข จัดการปัญหานั้นไม่ได้ ปรับความรู้สึกด้วยความลำบากจะส่งผลต่อการใช้ชีวิตประจำวัน และการเจ็บป่วย เช่น ความดันโลหิตสูง เป็นแผลในกระเพาะอาหาร ฯลฯ สิ่งที่ท่านต้องรีบทำเมื่อมีความเครียดในระดับนี้คือ คลายเครียดด้วยวิธีที่ทำได้ง่ายแต่ได้ผลดีคือ การฝึกหายใจ คลายเครียด พูดคุยระบายความเครียดกับผู้ไว้วางใจ หาสาเหตุหรือปัญหาที่ทำให้เครียดและหาวิธีแก้ไขหากท่านไม่สามารถจัดการคลายเครียดด้วยตนเองได้ ควรปรึกษากับผู้ให้การปรึกษาในหน่วยงานต่าง ๆ')
+      setColor('#E39113')
+    }
+    else{
+      setMessage('ท่านมีความเครียดในระดับรุนแรง ')
+      setdetail('เป็นความเครียดระดับสูงที่เกิดต่อเนื่องหรือท่านกำลังเผชิญกับวิกฤตของชีวิต เช่น เจ็บป่วยรุนแรง เรื้อรังมีความพิการ สูญเสียคนรัก ทรัพย์สิน หรือ สิ่งที่รัก ความเครียดระดับนี้ส่งผลทำให้เจ็บป่วยทางกายและสุขภาพจิต ชีวิตไม่มีความสุข ความคิดฟุ้งซ่าน การตัดสินใจไม่ดี ยับยั้งอารมณ์ไม่ได้ ความเครียดระดับนี้ถ้าปล่อยไว้จะเกิดผลเสียทั้งต่อตนเองและคนใกล้ชิด ควรได้รับการ ช่วยเหลือจากผู้ให้การปรึกษาอย่างรวดเร็ว เช่น ทางโทรศัพท์ หรือผู้ให้การปรึกษาในหน่วยงานต่าง ๆ')
+      setColor('#ED1D1D')
+    }
+    setShowAssessment(true);
+  };
+  useEffect(() => {
+    console.log(message);
+  }, [message]);
+  useEffect(() => {
+    console.log(detail);
+  }, [detail]);
+  useEffect(() => {
+    console.log(colortext);
+  }, [colortext]);
+
     return (
         <div className='sizepage' >
             <div style={{display: "flex", flexDirection: "column"}}>
+
+            {showAssessment ? (
+              <div style={{height:"100vh"}}>
+                
+                <br/><br/><br/><br/><span className="close" onClick={() => (setShowAssessment(false))}>&times;</span>
+                <br/>
+                <div className='popup'>
+                  <div className='mentalhealth'>
+                    ผลการประเมิน
+                  </div>
+                  <div>
+                    <br/><br/><div style={{color:colortext}}> {message}</div><br/>{detail}
+                  </div>
+                    
+                </div>
+              </div>
+                
             
-                <div>
+            ) : (
+              <div>
                     <div className='mentalhealth'> 
                         <br/><br/>แบบวัดความเครียด กรมสุขภาพจิต (SPST - 20)
                     </div> 
@@ -141,11 +198,13 @@ const Stress = props => {
                         <br/><p className='question'>&emsp;&emsp;20.&emsp;เป็นหวัดบ่อย ๆ</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={20}/>
 
-                        <br/><br/><button className='resultbtn'>Submit</button>
-                    </div> 
+                        <br/><br/><button className='resultbtn' onClick={calscore}>ประเมินผล</button>
+                  </div> 
                 </div>
+                        
+            )}
             </div>
-        </div>
+        </div>        
     );
 };
 

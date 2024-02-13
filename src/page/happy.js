@@ -48,8 +48,8 @@ const MyButton = ({ sharedScore, setSharedScore, questionId}) => {
             className="formbutton"
             style={{
                 marginLeft:"30px", marginRight:"30px",
-                backgroundColor: selectedButton === button.id ? '#9de2c0' : '#f6fef9',
-                color: selectedButton === button.id ? '#27495c' : '#27495c',
+              backgroundColor: selectedButton === button.id ? '#417a5e' : '#f6fef9',
+              color: selectedButton === button.id ? '#f6fef9' : '#27495c',
             }}
           >
             {button.name}
@@ -60,12 +60,109 @@ const MyButton = ({ sharedScore, setSharedScore, questionId}) => {
       };
 
 
+const MyButton2 = ({ sharedScore, setSharedScore, questionId}) => {
+
+  const [selectedButton, setSelectedButton] = useState(null);
+  const [previousSelectedButton, setPreviousSelectedButton] = useState(null);
+      
+      
+  const buttonData = [
+    { id: 1, value: 3 , name: 'ไม่เลย'},
+    { id: 2, value: 2 , name: 'เล็กน้อย'},
+    { id: 3, value: 1 , name: 'มาก'},
+    { id: 4, value: 0 , name: 'มากที่สุด'},
+    // Add more buttons as needed
+  ];
+      
+      
+  const handleButtonClick = (button) => {
+    if (selectedButton === button.id) {
+      // ถ้าปุ่มที่ถูกคลิกเป็นปุ่มที่ถูกเลือกอยู่แล้ว
+      setSelectedButton(null);
+      setPreviousSelectedButton(null);
+      setSharedScore(sharedScore - button.value);
+    } else {
+      // ถ้ามีปุ่มที่ถูกเลือกอยู่แล้ว ให้ลบค่าของปุ่มเดิมออก
+      if (selectedButton !== null) {
+        setSharedScore((prevScore) => prevScore - previousSelectedButton.value);
+      }
+      
+      setSelectedButton(button.id);
+      setPreviousSelectedButton(button);
+      setSharedScore((prevScore) => prevScore + button.value);
+    }
+  };
+      
+  useEffect(() => {
+    console.log('Total', sharedScore);
+  }, [sharedScore]);
+      
+    return (
+        <div class="inline">
+                
+          {buttonData.map((button) => (
+        <button
+          key={button.id}
+          onClick={() => handleButtonClick(button)}
+          className="formbutton"
+          style={{
+            marginLeft:"30px", marginRight:"30px",
+            backgroundColor: selectedButton === button.id ? '#417a5e' : '#f6fef9',
+            color: selectedButton === button.id ? '#f6fef9' : '#27495c',
+          }}
+        >
+          {button.name}
+        </button>
+        ))}
+        </div>
+      );
+    };
+
 const Happy = props => {
-    const [sharedScore, setSharedScore] = useState(0);
+
+  const [message, setMessage] = useState(0);
+  const [sharedScore, setSharedScore] = useState(0);
+  const [showAssessment, setShowAssessment] = useState(false);
+
+  const calscore = () => {
+    console.log(sharedScore);
+    if (sharedScore <= 27) {
+      setMessage('ความสุขต่ำกว่าคนปกติ')
+      
+    }
+    else if (sharedScore <= 34){
+      setMessage('ความสุขเท่ากับคนทั่วไป')
+    }
+    else{
+      setMessage('ความสุขมากกว่าคนทั่วไป')
+    }
+    setShowAssessment(true);
+  };
+  useEffect(() => {
+    console.log(message);
+  }, [message]);
+
     return (
         <div className='sizepage' >
             <div style={{display: "flex", flexDirection: "column"}}>
+            {showAssessment ? (
+              <div style={{height:"100vh"}}>
+                
+                <br/><br/><br/><br/><span className="close" onClick={() => (setShowAssessment(false))}>&times;</span>
+                <br/>
+                <div className='popup'>
+                  <div className='mentalhealth'>
+                    ผลการประเมิน
+                  </div>
+                  <div>
+                    <br/><br/>{message}
+                  </div>
+                    
+                </div>
+              </div>
+                
             
+            ) : (
                 <div>
                     <div className='mentalhealth'> 
                         <br/><br/>แบบประเมินความสุขคนไทย
@@ -81,13 +178,13 @@ const Happy = props => {
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={3}/>
 
                         <br/><p className='question'>&emsp;&emsp;4.&emsp;ท่านรู้สึกเบื่อหน่ายท้อแท้กับการดำเนินชีวิตประจำวัน</p><br/>
-                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={4}/>
+                        <MyButton2 sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={4}/>
 
                         <br/><p className='question'>&emsp;&emsp;5.&emsp;ท่านรู้สึกผิดหวังในตนเอง</p><br/>
-                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={5}/>
+                        <MyButton2 sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={5}/>
 
                         <br/><p className='question'>&emsp;&emsp;6.&emsp;ท่านรู้สึกว่าชีวิตมีแต่ความทุกข์</p><br/>
-                        <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={6}/>
+                        <MyButton2 sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={6}/>
 
                         <br/><p className='question'>&emsp;&emsp;7.&emsp;ท่านสามารถทำใจยอมรับได้สำหรับปัญหาที่ยากจะแก้ไข (เมื่อมีปัญหา)</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={7}/>
@@ -116,9 +213,10 @@ const Happy = props => {
                         <br/><p className='question'>&emsp;&emsp;15.&emsp;สมาชิกในครอบครัวมีความรักและผูกพันต่อกัน</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={15}/>
 
-                        <br/><br/><button className='resultbtn'>Submit</button>
+                        <br/><br/><button className='resultbtn' onClick={calscore}>ประเมินผล</button>
                     </div> 
                 </div>
+            )}
             </div>
         </div>
     );
