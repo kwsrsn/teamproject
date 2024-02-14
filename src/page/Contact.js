@@ -61,7 +61,7 @@ const Contact = props => {
                             </div>
                             <div>
                                 <div className='contactrow'>
-                                    <div style={{width:"75px", color:"white"}}>
+                                    <div style={{width:"75px", color:"white",marginLeft:"80px"}}>
                                         &emsp;เปิดทำการ
                                     </div>
                                     <div style={{color:"white"}}>
@@ -71,7 +71,7 @@ const Contact = props => {
                                     </div>
                                 </div>  
                         
-                                <div className='contactrow'>
+                                <div className='contactrow'style={{marginLeft:"80px"}}>
                                 <div>
                                 <img src={location} className='piclocation'/> 
                                 </div>
@@ -83,7 +83,7 @@ const Contact = props => {
                                     &emsp;เลขที่ 1 ฉลองกรุง 1 เขตลาดกระบัง กรุงเทพมหานคร 10520
                                     </div>
                                 </div>    
-                                <div className='contactrow'>
+                                <div className='contactrow'style={{marginLeft:"80px"}}>
                                 <div>
                                 <img src={call} classname='picphone' style={{ height:"25px",width:"25px"}}/>
                                 </div>
@@ -103,16 +103,29 @@ const Contact = props => {
                             <div className='contact1' style={{color:"white"}}>
                                 Developer
                             </div>
-                            <div style={{color:"white",marginLeft:"65px",fontSize:"14px",paddingTop:"35px"}}>
-                            นส.&nbsp;&nbsp;กรกนก &nbsp;&emsp;&nbsp;&nbsp;ศัตรูพินาศ&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gornganok.nk@gmail.com <br/>
-                            นส.&nbsp;&nbsp;กวิสรา&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เศียรอุ่น&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kawisara.sn@gmail.com<br/>
-                            นส.&nbsp;&nbsp;พิชญาภา&emsp;ประเสริฐวิทย์&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pichayapa1147@gmail.com <br/>
-                            นส.&nbsp;&nbsp;พิมพ์ลดา&emsp;สังข์สวัสดิ์ &emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@gmail.com<br/>
-                            นส.&nbsp;&nbsp;เยาวพา &emsp;&nbsp;&nbsp;คำมหา &emsp;&emsp;&nbsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yaowapakumm@gmail.com
-                            </div>
-                            <div style>
-
-                            </div>
+                            <div className='contactrow'>
+                                    <div style={{width:"75px", color:"white",marginLeft:"110px",paddingTop:"20px",fontSize:"15px"}}>
+                                        &emsp;กรกนก <br/>
+                                        &emsp;กวิสรา <br/>
+                                        &emsp;พิชญาภา <br/>
+                                        &emsp;พิมพ์ลดา <br/>
+                                        &emsp;เยาวพา <br/>
+                                    </div>
+                                    <div style={{color:"white",paddingTop:"20px",fontSize:"15px"}}>
+                                       &emsp;ศัตรูพินาศ<br/>
+                                       &emsp;เศียรอุ่น<br/>
+                                       &emsp;ประเสริฐวิทย์<br/>
+                                       &emsp;สังข์สวัสดิ์<br/>
+                                       &emsp;คำมหา<br/>
+                                    </div>
+                                    <div style={{color:"white",paddingTop:"20px",paddingLeft:"2px",fontSize:"15px"}}>
+                                       &emsp;gornganok.nk@gmail.com <br/>
+                                       &emsp;kawisara.sn@gmail.com<br/>
+                                       &emsp;pichayapa1147@gmail.com<br/>
+                                       &emsp;mildpimlada@gmail.com<br/>
+                                       &emsp;yaowapakumm@gmail.com<br/>
+                                    </div>
+                                </div> 
                         </div>
                     </div><br/><br/>
                 <div style={{width:"35%", backgroundColor:"#ffdb58", margin:"auto", padding:"20px", borderRadius:"30px", boxShadow:"0 4px 10px"}}>
