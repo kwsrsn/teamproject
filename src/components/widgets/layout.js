@@ -2,13 +2,14 @@ import Navbar from './Navbar';
 import mail from "../widgets/pic/mail.png";
 import phone from "../widgets/pic/phone.png";
 import './layout.css'
+import './Navbar.css'
 
 const Layout = ({children}) => {
     return( 
         <div>
             <div className='navbarlay'>
                 <Navbar/>    
-                <div>
+                <div className='page'>
                     {children}
                 </div>
 
