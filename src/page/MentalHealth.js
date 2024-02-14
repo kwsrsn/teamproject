@@ -27,14 +27,14 @@ const Mentalhealth = props => {
                     </div> 
                     <div className='topic'>
                         <div className='textform'>
-                            <div className='topicbox'>
-                                <p onClick={navigateTo9Q}><span>แบบประเมินโรคซึมเศร้าด้วย 9 คำถาม (9Q)</span></p>
+                            <div className='topicbox'  onClick={navigateTo9Q}>
+                                <p><span>แบบประเมินโรคซึมเศร้าด้วย 9 คำถาม (9Q)</span></p>
                             </div>
-                            <div className='topicbox'>
-                                <p onClick={navigateToHappy}><span>แบบประเมินความสุขคนไทย</span></p>
+                            <div className='topicbox' onClick={navigateToHappy}>
+                                <p><span>แบบประเมินความสุขคนไทย</span></p>
                             </div>
-                            <div className='topicbox'>
-                                <p onClick={navigateToStress}><span>แบบวัดความเครียด กรมสุขภาพจิต (SPST - 20)</span></p>
+                            <div className='topicbox' onClick={navigateToStress}>
+                                <p><span>แบบวัดความเครียด กรมสุขภาพจิต (SPST - 20)</span></p>
                             </div>
                         </div> 
                     </div>

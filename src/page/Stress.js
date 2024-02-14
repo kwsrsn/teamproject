@@ -49,7 +49,7 @@ const MyButton = ({ sharedScore, setSharedScore, questionId}) => {
             className="buttonstress"
             style={{
                 marginLeft:"30px", marginRight:"30px",
-                backgroundColor: selectedButton === button.id ? '#9de2c0' : '#f6fef9',
+                backgroundColor: selectedButton === button.id ? '#f9e59b' : '#f6fef9',
                 color: selectedButton === button.id ? '#27495c' : '#27495c',
             }}
           >
@@ -69,8 +69,12 @@ const Stress = props => {
   const [colortext, setColor] = useState(0);
   const [sharedScore, setSharedScore] = useState(0);
   const [showAssessment, setShowAssessment] = useState(false);
+  //const [selectedButton, setSelectedButton] = useState(null);
 
   const calscore = () => {
+    // if (setSelectedButton(false)) {
+    //   alert("pls")
+    // }
     console.log(sharedScore);
     if (sharedScore <= 23) {
       setMessage('ท่านมีความเครียดอยู่ในระดับน้อย')
@@ -94,6 +98,7 @@ const Stress = props => {
     }
     setShowAssessment(true);
   };
+
   useEffect(() => {
     console.log(message);
   }, [message]);

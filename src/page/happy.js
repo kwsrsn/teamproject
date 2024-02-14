@@ -48,8 +48,8 @@ const MyButton = ({ sharedScore, setSharedScore, questionId}) => {
             className="formbutton"
             style={{
                 marginLeft:"30px", marginRight:"30px",
-              backgroundColor: selectedButton === button.id ? '#417a5e' : '#f6fef9',
-              color: selectedButton === button.id ? '#f6fef9' : '#27495c',
+              backgroundColor: selectedButton === button.id ? '#f9e59b' : '#f6fef9',
+              color: selectedButton === button.id ? '#27495c' : '#27495c',
             }}
           >
             {button.name}
@@ -107,8 +107,8 @@ const MyButton2 = ({ sharedScore, setSharedScore, questionId}) => {
           className="formbutton"
           style={{
             marginLeft:"30px", marginRight:"30px",
-            backgroundColor: selectedButton === button.id ? '#417a5e' : '#f6fef9',
-            color: selectedButton === button.id ? '#f6fef9' : '#27495c',
+            backgroundColor: selectedButton === button.id ? '#f9e59b' : '#f6fef9',
+            color: selectedButton === button.id ? '#27495c' : '#27495c',
           }}
         >
           {button.name}
@@ -122,25 +122,31 @@ const Happy = props => {
 
   const [message, setMessage] = useState(0);
   const [sharedScore, setSharedScore] = useState(0);
+  const [colortext, setColor] = useState(0);
   const [showAssessment, setShowAssessment] = useState(false);
 
   const calscore = () => {
     console.log(sharedScore);
     if (sharedScore <= 27) {
       setMessage('ความสุขต่ำกว่าคนปกติ')
-      
+      setColor('#4d2eb8')
     }
     else if (sharedScore <= 34){
       setMessage('ความสุขเท่ากับคนทั่วไป')
+      setColor('#85cdca')
     }
     else{
       setMessage('ความสุขมากกว่าคนทั่วไป')
+      setColor('#7fdc96')
     }
     setShowAssessment(true);
   };
   useEffect(() => {
     console.log(message);
   }, [message]);
+  useEffect(() => {
+    console.log(colortext);
+  }, [colortext]);
 
     return (
         <div className='sizepage' >
@@ -155,7 +161,7 @@ const Happy = props => {
                     ผลการประเมิน
                   </div>
                   <div>
-                    <br/><br/>{message}
+                    <br/><br/><div style={{color:colortext}}>{message}</div>
                   </div>
                     
                 </div>
