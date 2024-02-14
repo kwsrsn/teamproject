@@ -62,7 +62,7 @@
     background-size: cover;
     width: 98%;
     height: 80vh;
-    background-position: center;
+    background-position: left;
     margin-left: 1%;
     margin-top: 105px;
     margin-bottom: 15px;
@@ -136,7 +136,7 @@
     margin-left: 3%;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 768px){
     .boxhome{
         height: calc(380px + 20px);
     }
@@ -172,13 +172,12 @@
 /**/
 .item {
     display: grid;
-    grid-template-columns: 24% 24% 24% 24%;
-    grid-row-gap: 0.3%;
-    grid-column-gap: 0.3%;
-    justify-content: center;
-    margin-left: 0.75%;
-    margin-right: 0.75%;
-
+    grid-template-columns: repeat(auto-fit, minmax(280px,23vw));
+    grid-row-gap: 5%;
+    grid-column-gap: 0.7%;
+    justify-content: space-evenly;
+    overflow-x: auto;
+    margin-top: 8%;
 }
 .picsize{
     margin-top: 120px;
@@ -192,7 +191,6 @@
     color: #273d5c;
 }
 .boxcover{
-    margin-top: 150px;
     width: 280px; 
     height: 240px;
     border-radius: 10px;
@@ -222,15 +220,7 @@
     float: center;
     margin-left: 5px;  
 }
-.directionnews{
-    height:614px; 
-    width: 620px;
-    display: flex;
-    flex-direction: column;
-    
-}
 .boxcontent{
-    margin-top: 50px;
     width: 280px; 
     height: 240px; 
     border-radius: 10px;
@@ -342,7 +332,6 @@
 .topicbox span {
     cursor: pointer;
     display: inline-block;
-    position: relative;
     transition: 0.5s;
 }
 .topicbox span:after {
@@ -356,6 +345,7 @@
 .topicbox:hover span {
     padding-right: 25px;
     text-decoration: underline;
+    position: relative;
 }
 .topicbox:hover span:after {
     opacity: 1;

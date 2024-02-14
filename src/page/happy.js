@@ -133,11 +133,11 @@ const Happy = props => {
     }
     else if (sharedScore <= 34){
       setMessage('ความสุขเท่ากับคนทั่วไป')
-      setColor('#85cdca')
+      setColor('#45d4c9')
     }
     else{
       setMessage('ความสุขมากกว่าคนทั่วไป')
-      setColor('#7fdc96')
+      setColor('#2ada56')
     }
     setShowAssessment(true);
   };
