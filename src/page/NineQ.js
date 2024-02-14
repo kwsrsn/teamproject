@@ -49,8 +49,8 @@ const MyButton = ({ sharedScore, setSharedScore, questionId}) => {
           className="formbutton"
           style={{
             marginLeft:"30px", marginRight:"30px",
-            backgroundColor: selectedButton === button.id ? '#417a5e' : '#f6fef9',
-            color: selectedButton === button.id ? '#f6fef9' : '#27495c',
+            backgroundColor: selectedButton === button.id ? '#f9e59b' : '#f6fef9',
+            color: selectedButton === button.id ? '#27495c' : '#27495c',
           }}
         >
           {button.name}

@@ -372,6 +372,9 @@
 }
 .question{
     /* background-color: #7ee0b3; */
+    display: grid;
+    grid-template-columns:auto;
+    grid-template-rows: auto;
     background-color: #a8dee0;
     height: 40px;
     width: 65%;
