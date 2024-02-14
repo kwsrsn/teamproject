@@ -177,7 +177,28 @@
     grid-column-gap: 0.7%;
     justify-content: space-evenly;
     overflow-x: auto;
-    margin-top: 8%;
+    margin-top: 7%;
+    //padding-top: 3%;
+}
+@media screen and (max-width: 600px) {
+    .item{
+        padding-top: 55%;
+        padding-left: 25%;
+        /* phone */
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 1024px)  {
+    .item{
+        padding-top: 13%;
+        padding-right: 4%;
+        /* tablet */
+    }
+}
+@media screen and (min-width: 1025px) {
+    .item{
+        padding-top: 2%;
+        /* computer */
+    }
 }
 .picsize{
     margin-top: 120px;

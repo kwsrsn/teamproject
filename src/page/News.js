@@ -53,7 +53,7 @@ const News = props => {
                     </div>
                 </div>
             </a>
-            <a  style={{textDecoration: 'none'}} className="custom-link" href="https://health-articles.my.canva.site/broken-heart-syndrome">
+            <a  style={{textDecoration: 'none'}} className="custom-link" href="https://health-articles.my.canva.site/reason-to-get-more-sleep">
                 <div className='boxcontent'>
                     <div>
                         <img src={Image5} className='piccontent'/>
