@@ -1,13 +1,52 @@
-import React from 'react';
+import React ,{ useState , useEffect} from 'react';
 import './style.css'
+import {getFirestore, doc, collection, setDoc }from "firebase/firestore";
 import mail from "../components/widgets/pic/mail.png";
 import phone from "../components/widgets/pic/phone.png";
 import location from "../img/location.png";
 import call from "../img/call.png";
 import backgroundcon from "../img/contact11111.jpg";
 import backdeveloper from "../img/Developer.jpg";
+// firebaseConfig.js
+import {db} from '../firebaseConfig';
+import { useNavigate } from 'react-router-dom';
+
+
+
+
 
 const Contact = props => {
+    const navigate = useNavigate();
+    const[inputValue1, setInputValue1]=useState('');
+    const[inputValue2, setInputValue2]=useState('');
+    const[inputValue3, setInputValue3]=useState('');
+    const[inputValue4, setInputValue4]=useState('');
+    const myCollection = collection(db,"/name")
+
+    const saveDataToFirestore= async (e)=>{
+        e.preventDefault()
+        navigate("/")
+        try{
+            const docRef ={
+            field1: inputValue1,
+            field2: inputValue2,
+            field3: inputValue3,
+            field4: inputValue4,
+            };
+            const myDocRef = doc(myCollection, inputValue1);
+            await setDoc(myDocRef, docRef);
+            console.log("Document written to Database");
+        
+        }catch (e){
+            console.log("Error");
+        }
+            
+        
+        
+    }
+
+
+
     return (
         <div className='sizehome'> 
             <div className='mentalhealth'> 
@@ -64,6 +103,13 @@ const Contact = props => {
                             <div className='contact1' style={{color:"white"}}>
                                 Developer
                             </div>
+                            <div style={{color:"white",marginLeft:"70px",fontSize:"14px",paddingTop:"35px"}}>
+                            &emsp;&emsp;นส.&nbsp;&nbsp;กรกนก &nbsp;&emsp;&nbsp;&nbsp;ศัตรูพินาศ&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gornganok.nk@gmail.com <br/>
+                            &emsp;&emsp;นส.&nbsp;&nbsp;กวิสรา&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เศียรอุ่น&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kawisara.sn@gmail.com<br/>
+                            &emsp;&emsp;นส.&nbsp;&nbsp;พิชญาภา&emsp;ประเสริฐวิทย์&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pichayapa1147@gmail.com <br/>
+                            &emsp;&emsp;นส.&nbsp;&nbsp;พิมพ์ลดา&emsp;สังข์สวัสดิ์ &emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@gmail.com<br/>
+                            &emsp;&emsp;นส.&nbsp;&nbsp;เยาวพา &emsp;&nbsp;&nbsp;คำมหา &emsp;&emsp;&nbsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yaowapakumm@gmail.com
+                            </div>
                         </div>
                     </div><br/><br/>
                 <div style={{width:"35%", backgroundColor:"#ffdb58", margin:"auto", padding:"20px", borderRadius:"30px", boxShadow:"0 4px 10px"}}>
@@ -73,45 +119,57 @@ const Contact = props => {
                             <label>
                                 <input 
                                     type="text" 
+                                    value={inputValue1}
                                     name="name" 
                                     className='formcontact'
                                     placeholder="ชื่อ" 
                                     style={{width:"400px"}}
+                                    onChange={(e)=> setInputValue1(e.target.value)}
                                 />
                             </label><br/>
 
                             <label>
                                 <input 
                                     type="text" 
+                                    value={inputValue2}
                                     name="phone" 
                                     className='formcontact'
                                     placeholder="เบอร์โทร" 
                                     style={{width:"180px",marginRight:"15px"}}
+                                    onChange={(e)=> setInputValue2(e.target.value)}
                                 />
                             </label>
 
                             <label>
                                 <input 
-                                    type="text" 
+                                    type="email"
+                                    value={inputValue3} 
                                     name="email" 
                                     className='formcontact'
                                     placeholder="Email" 
                                     style={{width:"180px"}}
+                                    onChange={(e)=> setInputValue3(e.target.value)}
                                 />
                             </label><br/>
 
                             <label>
                                 <input 
                                     type="text" 
+                                    value={inputValue4}
                                     name="text" 
                                     className='formcontact'
                                     placeholder="รายละเอียด" 
                                     style={{width:"400px", height:"120px"}}
+                                    onChange={(e)=> setInputValue4(e.target.value)}
                                 />
                             </label><br/>
 
-                            <button classname="btn btn-success"> Submit </button>
+                            
                         </form>
+                        <form onClick={saveDataToFirestore}>
+                            <button type="submit"> Submit </button>
+                        </form>
+
                     </div>
                 </div>
             </div> 
