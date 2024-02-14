@@ -103,12 +103,15 @@ const Contact = props => {
                             <div className='contact1' style={{color:"white"}}>
                                 Developer
                             </div>
-                            <div style={{color:"white",marginLeft:"70px",fontSize:"14px",paddingTop:"35px"}}>
-                            &emsp;&emsp;นส.&nbsp;&nbsp;กรกนก &nbsp;&emsp;&nbsp;&nbsp;ศัตรูพินาศ&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gornganok.nk@gmail.com <br/>
-                            &emsp;&emsp;นส.&nbsp;&nbsp;กวิสรา&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เศียรอุ่น&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kawisara.sn@gmail.com<br/>
-                            &emsp;&emsp;นส.&nbsp;&nbsp;พิชญาภา&emsp;ประเสริฐวิทย์&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pichayapa1147@gmail.com <br/>
-                            &emsp;&emsp;นส.&nbsp;&nbsp;พิมพ์ลดา&emsp;สังข์สวัสดิ์ &emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@gmail.com<br/>
-                            &emsp;&emsp;นส.&nbsp;&nbsp;เยาวพา &emsp;&nbsp;&nbsp;คำมหา &emsp;&emsp;&nbsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yaowapakumm@gmail.com
+                            <div style={{color:"white",marginLeft:"65px",fontSize:"14px",paddingTop:"35px"}}>
+                            นส.&nbsp;&nbsp;กรกนก &nbsp;&emsp;&nbsp;&nbsp;ศัตรูพินาศ&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gornganok.nk@gmail.com <br/>
+                            นส.&nbsp;&nbsp;กวิสรา&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เศียรอุ่น&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kawisara.sn@gmail.com<br/>
+                            นส.&nbsp;&nbsp;พิชญาภา&emsp;ประเสริฐวิทย์&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pichayapa1147@gmail.com <br/>
+                            นส.&nbsp;&nbsp;พิมพ์ลดา&emsp;สังข์สวัสดิ์ &emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@gmail.com<br/>
+                            นส.&nbsp;&nbsp;เยาวพา &emsp;&nbsp;&nbsp;คำมหา &emsp;&emsp;&nbsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yaowapakumm@gmail.com
+                            </div>
+                            <div style>
+
                             </div>
                         </div>
                     </div><br/><br/>
@@ -123,7 +126,7 @@ const Contact = props => {
                                     name="name" 
                                     className='formcontact'
                                     placeholder="ชื่อ" 
-                                    style={{width:"400px"}}
+                                    style={{width:"90%"}}
                                     onChange={(e)=> setInputValue1(e.target.value)}
                                 />
                             </label><br/>
@@ -135,7 +138,7 @@ const Contact = props => {
                                     name="phone" 
                                     className='formcontact'
                                     placeholder="เบอร์โทร" 
-                                    style={{width:"180px",marginRight:"15px"}}
+                                    style={{width:"41%",marginRight:"15px"}}
                                     onChange={(e)=> setInputValue2(e.target.value)}
                                 />
                             </label>
@@ -147,7 +150,7 @@ const Contact = props => {
                                     name="email" 
                                     className='formcontact'
                                     placeholder="Email" 
-                                    style={{width:"180px"}}
+                                    style={{width:"41%"}}
                                     onChange={(e)=> setInputValue3(e.target.value)}
                                 />
                             </label><br/>
@@ -159,7 +162,7 @@ const Contact = props => {
                                     name="text" 
                                     className='formcontact'
                                     placeholder="รายละเอียด" 
-                                    style={{width:"400px", height:"120px"}}
+                                    style={{width:"90%", height:"120px"}}
                                     onChange={(e)=> setInputValue4(e.target.value)}
                                 />
                             </label><br/>
