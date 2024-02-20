@@ -130,7 +130,7 @@ const Mentalhealth = props =>{
                         <br/><br/>แบบประเมินโรคซึมเศร้าด้วย 9 คำถาม (9Q)
                     </div> 
                     <div className='textform'>
-                        <br/><p className='question'>&emsp;&emsp;1.&emsp;เบื่อ ไม่สนใจอยากทำอะไร</p><br/>
+                        <br/><div className='question'>&emsp;&emsp;1.&emsp;เบื่อ ไม่สนใจอยากทำอะไร</div><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={1}/>
 
                         <br/><p className='question'>&emsp;&emsp;2.&emsp;ไม่สบายใจ ซึมเศร้า ท้อแท้</p><br/>
@@ -151,7 +151,7 @@ const Mentalhealth = props =>{
                         <br/><p className='question'>&emsp;&emsp;7.&emsp; สมาธิไม่ดี เวลาทำอะไร เช่น ดูโทรทัศน์ ฟังวิทยุ หรือทำงานที่ต้องใช้ความตั้งใจ</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={7}/>
                         
-                        <br/><p className='question'>&emsp;&emsp;8.&emsp;พูดช้าทำอะไรช้าลงจนคนอื่นสังเกตเห็นได้ หรือกระสับกระส่ายไม่สามารถอยู่นิ่งได้เหมือนที่เคยเป็น</p><br/>
+                        <br/><div className='question'>&emsp;&emsp;8.&emsp;พูดช้าทำอะไรช้าลงจนคนอื่นสังเกตเห็นได้ หรือกระสับกระส่ายไม่สามารถอยู่นิ่งได้เหมือนที่เคยเป็น</div><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={8}/>
                         
                         <br/><p className='question'>&emsp;&emsp;9.&emsp;คิดทำร้ายตนเอง หรือคิดว่าถ้าตายไปคงจะดี</p><br/>

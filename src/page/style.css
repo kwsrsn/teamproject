@@ -178,28 +178,8 @@
     justify-content: space-evenly;
     overflow-x: auto;
     margin-top: 7%;
-    //padding-top: 3%;
 }
-@media screen and (max-width: 600px) {
-    .item{
-        padding-top: 55%;
-        padding-left: 25%;
-        /* phone */
-    }
-}
-@media screen and (min-width: 601px) and (max-width: 1024px)  {
-    .item{
-        padding-top: 13%;
-        padding-right: 4%;
-        /* tablet */
-    }
-}
-@media screen and (min-width: 1025px) {
-    .item{
-        padding-top: 2%;
-        /* computer */
-    }
-}
+
 .picsize{
     margin-top: 120px;
     height: 370px;
@@ -294,12 +274,20 @@
     margin-top: 2%;
     border-radius: 5px;
 }
-.contactrow{
+.contactrow1{
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    text-align: left;
+    padding-top: 10px;
+}
+.contactrow2{
     display: flex;
     flex-direction: row;
     font-size: 14px;
     text-align: left;
     padding-top: 10px;
+    justify-content: center;
 }
 .piclocation{
     width: 27px;
@@ -310,10 +298,131 @@
     width: 80%;
     margin-left: 15%;
 }
+.open{
+    width: 15%;
+    margin-left: 10%;
+    color: #fff;
+}
+.detail1{
+    width: 85%;
+    color: #fff;
+    padding-right: 10px;
+    margin-left: 2px;
+}
+.detail2{
+    color: #fff;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+.detail3{
+    color: #fff;
+    padding-left: 1px;
+    padding-right: 10px;
+}
+.place{
+    width: 75px;
+    color: #fff;
+    margin-left: 6px;
+    margin-right: 1px;
+}
+.phone{
+    width: 80px;
+    color: #fff;
+    padding-right: 1px;
+    margin-left: 1px;
+}
+.clinic{
+    width: 45%;
+    background-color: #e77575;
+    padding: 1px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px;
+}
+.Develop{
+    width: 40%;
+    background-color: #37ad92;
+    margin-left: 25px;
 
-.backdeve{
-    width: 80%;
-    margin-left: 5%;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px;
+}
+.Namecon{
+    /* margin-left: 120px; */
+    
+    width: 80px;
+    color:#fff;
+    padding-top: 8px;
+    font-size: 15px;
+
+}
+.Lastcon{
+    color: #fff;
+    padding-top: 8px;
+    font-size: 15px;
+
+}
+.Emailcon{
+    color: #fff;
+    padding-top: 8px;
+    padding-left: 5%;
+    font-size: 15px;
+    width: 30%;
+}
+.Reportcon{
+    width: 40%;
+    background-color:#ffdb58 ;
+    margin: auto;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px;
+}
+.Namere{
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: 2%;
+    border-radius: 5px;
+    width: 90%;
+}
+.phonere{
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: 2%;
+    border-radius: 5px;
+    width: 41%;
+    margin-right: 15px;
+}
+.emailre{
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: 2%;
+    border-radius: 5px;
+    width: 41%;
+}
+.problem{
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: 2%;
+    border-radius: 5px;
+    width: 90%;
+    height: 120px;
+}
+.mentalhealth1{
+    font-size: 40px;
+    font-weight:bold;
+    text-align: center;
+    color: #273d5c;
+    font-family: 'Kanit', sans-serif;
+}
+.submitreport{
+    background-color: #1645e0;
+    border-radius: 30px;
+    color:#ffffff;
+    border:0;
+    height: 40px;
+    width:100px;
+    font-size: medium;
+    margin-top: 20px;
 }
 
 
@@ -327,6 +436,7 @@
     color: #273d5c;
     font-family: 'Kanit', sans-serif;
 }
+
 .topic{
     display: grid;
     grid-template-columns:auto;
@@ -390,14 +500,6 @@
     padding-top: 15px;
     text-align: left;
     vertical-align: middle;
-}
-.subquestion{
-    background-color: #a9f4d1;
-    height:fit-content;
-    width: 65%;
-    padding-top: 15px;
-    text-align: left;
-    align-content: space-around;
 }
 .formbutton{
     background-color: #f6fef9;
@@ -488,4 +590,98 @@
     margin-right: 15%;
     background-color: #f6fef9;
     padding: 5%;
+}
+@media screen and (max-width: 767px) {
+    .item{
+        padding-top: 55%;
+        padding-left: 25%;
+        /* phone */
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px)  {
+    .item{
+        padding-top: 15%;
+        padding-right: 4%;
+        /* portrait ipad */
+    }
+    .mentalhealth{
+        padding-top: 5%;
+        /* portrait ipad */
+    }
+    .formbutton{
+        margin: 2%;
+    }
+    .question{
+        font-size: 16.5px;
+        /* justify-content: center;  */
+        height: 50px;
+        width: 85%;
+        /* justify-items: center; */
+        text-align: center;
+        vertical-align: middle; 
+        /* align-self: center; */
+    }
+    .buttonstress{
+        
+        height: 5vh;
+        width: 8vh;
+    }
+    .clinic{
+
+        margin: 8px;
+        padding-left: 10px;
+        width: 95%;
+        padding-top: 2%;
+    }
+    .detail1{
+        margin-left: 25px;
+
+    }
+    .detail2{
+        margin-right: 60px;
+    }
+    .detail3{
+        margin-left: 1px;
+        
+    }
+    .place{
+        margin-left: 1px;
+    }
+    .Develop{
+        margin: 11px;
+        padding-right: 59px;
+        width: 55%;
+    }
+    .Namecon{
+        margin-left: 1px;
+    }
+    .mentalhealth1{
+        padding-top: 7%;
+    }
+    .Reportcon{
+        width: 50%;
+    }
+    .contactrow2{
+        
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px)  {
+    .item{
+        padding-top: 5%;
+        grid-row-gap: 5%;
+        grid-column-gap: 5%;
+        justify-content:space-evenly;
+        padding-right:4%;
+        /* landscape ipad */
+    }
+    .Develop{
+        padding-right: 60px;
+        margin-right: 35px;
+    }
+    .clinic{
+        
+        margin-left: 35px;
+    }
+    
 }
