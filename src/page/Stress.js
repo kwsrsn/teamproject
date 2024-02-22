@@ -135,6 +135,7 @@ const Stress = props => {
                     <div className='mentalhealth'> 
                         <br/><br/>แบบวัดความเครียด กรมสุขภาพจิต (SPST - 20)
                     </div> 
+                    <div className='texttime'>( ในระยะ 6 เดือนที่ผ่านมา )</div>
                     <div className='textstress'>
                         <br/>ระดับความเครียด 1 หมายถึง ไม่รู้สึกเครียด
                         <br/>ระดับความเครียด 2 หมายถึง รู้สึกเครียดเล็กน้อย
@@ -143,64 +144,64 @@ const Stress = props => {
                         <br/>ระดับความเครียด 5 หมายถึง รู้สึกเครียดมากที่สุด
                     </div>
                     <div className='textform'>
-                        <br/><p className='question'>&emsp;&emsp;1.&emsp;กลัวทำงานผิดพลาด</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;1.&nbsp;&nbsp;กลัวทำงานผิดพลาด</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={1}/>
 
-                        <br/><p className='question'>&emsp;&emsp;2.&emsp;ไปไม่ถึงเป้าหมายที่วางไว้</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;2.&nbsp;&nbsp;ไปไม่ถึงเป้าหมายที่วางไว้</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={2}/>
 
-                        <br/><p className='question'>&emsp;&emsp;3.&emsp;ครอบครัวมีความขัดแย้งกันในเรื่องเงินหรือเรื่องงานในบ้าน</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;3.&nbsp;&nbsp;ครอบครัวมีความขัดแย้งกันในเรื่องเงินหรือเรื่องงานในบ้าน</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={3}/>
 
-                        <br/><p className='question'>&emsp;&emsp;4.&emsp;เป็นกังวลกับเรื่องสารพิษหรือมลภาวะในอากาศ น้ำ เสียง และดิน</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;4.&nbsp;&nbsp;เป็นกังวลกับเรื่องสารพิษหรือมลภาวะในอากาศ น้ำ เสียง และดิน</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={4}/>
 
-                        <br/><p className='question'>&emsp;&emsp;5.&emsp;รู้สึกว่าต้องแข่งขันหรือเปรียบเทียบ</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;5.&nbsp;&nbsp;รู้สึกว่าต้องแข่งขันหรือเปรียบเทียบ</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={5}/>
 
-                        <br/><p className='question'>&emsp;&emsp;6.&emsp;เงินไม่พอใช้จ่าย</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;6.&nbsp;&nbsp;เงินไม่พอใช้จ่าย</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={6}/>
 
-                        <br/><p className='question'>&emsp;&emsp;7.&emsp;กล้ามเนื้อตึงหรือปวด</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;7.&nbsp;&nbsp;กล้ามเนื้อตึงหรือปวด</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={7}/>
 
-                        <br/><p className='question'>&emsp;&emsp;8.&emsp;ปวดหัวจากความตึงเครียด</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;8.&nbsp;&nbsp;ปวดหัวจากความตึงเครียด</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={8}/>
 
-                        <br/><p className='question'>&emsp;&emsp;9.&emsp;ปวดหลัง</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;9.&nbsp;&nbsp;ปวดหลัง</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={9}/>
 
-                        <br/><p className='question'>&emsp;&emsp;10.&emsp;ความอยากอาหารเปลี่ยนแปลง</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;10.&nbsp;&nbsp;ความอยากอาหารเปลี่ยนแปลง</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={10}/>
 
-                        <br/><p className='question'>&emsp;&emsp;11.&emsp;ปวดศีรษะข้างเดียว</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;11.&nbsp;&nbsp;ปวดศีรษะข้างเดียว</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={11}/>
 
-                        <br/><p className='question'>&emsp;&emsp;12.&emsp;รู้สึกวิตกกังวล</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;12.&nbsp;&nbsp;รู้สึกวิตกกังวล</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={12}/>
 
-                        <br/><p className='question'>&emsp;&emsp;13.&emsp;รู้สึกคับข้องใจ</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;13.&nbsp;&nbsp;รู้สึกคับข้องใจ</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={13}/>
 
-                        <br/><p className='question'>&emsp;&emsp;14.&emsp;รู้สึกโกรธ หรือหงุดหงิด</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;14.&nbsp;&nbsp;รู้สึกโกรธ หรือหงุดหงิด</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={14}/>
 
-                        <br/><p className='question'>&emsp;&emsp;15.&emsp;รู้สึกเศร้า</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;15.&nbsp;&nbsp;รู้สึกเศร้า</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={15}/>
 
-                        <br/><p className='question'>&emsp;&emsp;16.&emsp;ความจำไม่ดี</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;16.&nbsp;&nbsp;ความจำไม่ดี</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={16}/>
 
-                        <br/><p className='question'>&emsp;&emsp;17.&emsp;รู้สึกสับสน</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;17.&nbsp;&nbsp;รู้สึกสับสน</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={17}/>
 
-                        <br/><p className='question'>&emsp;&emsp;18.&emsp;ตั้งสมาธิลำบาก</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;18.&nbsp;&nbsp;ตั้งสมาธิลำบาก</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={18}/>
 
-                        <br/><p className='question'>&emsp;&emsp;19.&emsp;รู้สึกเหนื่อยง่าย</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;19.&nbsp;&nbsp;รู้สึกเหนื่อยง่าย</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={19}/>
 
-                        <br/><p className='question'>&emsp;&emsp;20.&emsp;เป็นหวัดบ่อย ๆ</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;20.&nbsp;&nbsp;เป็นหวัดบ่อย ๆ</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={20}/>
 
                         <br/><br/><button className='resultbtn' onClick={calscore}>ประเมินผล</button>

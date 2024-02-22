@@ -44,6 +44,13 @@ const Contact = props => {
         
         
     }
+     const names = [
+        { fn: "กรกนก", ln: "ศัตรูพินาศ", ml:"gornganok.nk@gmail.com"},
+        { fn: "กวิสรา", ln: "เศียรอุ่น", ml:"kawisara.sn@gmail.com"},
+        { fn: "พิชญาภา", ln: "ประเสริฐวิทย์", ml:"pichayapa1147@gmail.com"},
+        { fn: "พิมพ์ลดา", ln: "สังข์สวัสดิ์", ml:"mildpimlada@gmail.com"},
+        { fn: "เยาวพา", ln: "คำมหา", ml:"yaowapakumm@gmail.com"},
+     ];
 
 
 
@@ -60,7 +67,7 @@ const Contact = props => {
                                 คลินิกเวชกรรม สจล. คณะแพทยศาสตร์
                             </div>
                             <div>
-                                <div className='contactrow1'>
+                                <div className='contactrow3'>
                                     <div className='open'>
                                         เปิดทำการ
                                     </div>
@@ -71,24 +78,24 @@ const Contact = props => {
                                     </div>
                                 </div>  
                         
-                                <div className='contactrow1'style={{marginLeft:"6%"}}>
+                                <div className='contactrow3'>
                                 <div>
                                 <img src={location} className='piclocation'/> 
                                 </div>
                                     <div className='place'>
-                                        &emsp;ที่ตั้ง 
+                                        &nbsp;&nbsp;ที่ตั้ง 
                                     </div>
                                     <div  className='detail2'>
                                     สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง <br/>
                                     เลขที่ 1 ฉลองกรุง 1 เขตลาดกระบัง กรุงเทพมหานคร 10520
                                     </div>
                                 </div>    
-                                <div className='contactrow1'style={{marginLeft:"7%"}}>
+                                <div className='contactrow3'>
                                 <div>
-                                <img src={call} classname='picphone' style={{ height:"20px",width:"20px"}}/>
+                                <img src={call} className='picphone'/>
                                 </div>
                                     <div className='phone'>
-                                    &emsp;โทรศัพท์
+                                    &nbsp;&nbsp;โทรศัพท์
                                     </div>
                                     <div  className='detail3'>
                                         02 329 8143 <br/>
@@ -104,28 +111,21 @@ const Contact = props => {
                                 Developer
                             </div>
                             <div className='contactrow2'>
-                                    <div className='Namecon'>
-                                        กรกนก <br/>
-                                        กวิสรา <br/>
-                                        พิชญาภา <br/>
-                                        พิมพ์ลดา <br/>
-                                        เยาวพา <br/>
+                                {names.map((person, index) => (
+                                    <div key={index} className="name-item">
+                                        <span className='first-name'>{person.fn}</span>
+                                        <span className='last-name'>{person.ln}</span>
+                                        <span className='email'>{person.ml}</span>
                                     </div>
-                                    <div className='Lastcon'>
-                                       ศัตรูพินาศ<br/>
-                                       เศียรอุ่น<br/>
-                                       ประเสริฐวิทย์<br/>
-                                       สังข์สวัสดิ์<br/>
-                                       คำมหา<br/>
-                                    </div>
-                                    <div className='Emailcon'>
-                                       gornganok.nk@gmail.com <br/>
-                                       kawisara.sn@gmail.com<br/>
-                                       pichayapa1147@gmail.com<br/>
-                                       mildpimlada@gmail.com<br/>
-                                       yaowapakumm@gmail.com<br/>
-                                    </div>
+                                ))}   
                                 </div> 
+                                <div className='Namecon'>
+                                        กรกนก&emsp;&emsp;ศัตรูพินาศ&emsp;&emsp;&emsp;gornganok.nk@gmail.com<br/>
+                                        กวิสรา&emsp;&emsp;&nbsp;เศียรอุ่น&emsp;&emsp;&emsp;&emsp;kawisara.sn@gmail.com<br/>
+                                        พิชญาภา&emsp;ประเสริฐวิทย์&emsp;&emsp;pichayapa1147@gmail.com<br/>
+                                        พิมพ์ลดา&emsp;สังข์สวัสดิ์&emsp;&emsp;&emsp;mildpimlada@gmail.com<br/>
+                                        เยาวพา&emsp;&nbsp;&nbsp;&nbsp;คำมหา&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;yaowapakumm@gmail.com<br/>
+                                </div>
                         </div>
                     </div><br/><br/>
                 <div className='Reportcon'>
@@ -150,7 +150,6 @@ const Contact = props => {
                                     name="phone" 
                                     className='phonere'
                                     placeholder="เบอร์โทร" 
-                                    style={{width:"41%",marginRight:"15px"}}
                                     onChange={(e)=> setInputValue2(e.target.value)}
                                 />
                             </label>
@@ -162,7 +161,6 @@ const Contact = props => {
                                     name="email" 
                                     className='emailre'
                                     placeholder="Email" 
-                                    style={{width:"41%"}}
                                     onChange={(e)=> setInputValue3(e.target.value)}
                                 />
                             </label><br/>
@@ -174,7 +172,6 @@ const Contact = props => {
                                     name="text" 
                                     className='problem'
                                     placeholder="รายละเอียด" 
-                                    style={{width:"90%", height:"120px"}}
                                     onChange={(e)=> setInputValue4(e.target.value)}
                                 />
                             </label><br/>

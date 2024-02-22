@@ -17,7 +17,7 @@ const Mentalhealth = props => {
     };
 
     return (
-        <div className='mentalhealthbg'>Mentalhealth
+        <div className='mentalhealthbg'>
         <div className='sizepage' style={{height:"100vh"}}>
             <div style={{display: "flex", flexDirection: "column"}}>
             

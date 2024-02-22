@@ -136,12 +136,13 @@
     margin-left: 3%;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
     .boxhome{
         height: calc(380px + 20px);
     }
     .boxtext{
         font-size: 11px;
+        width: 65%;
     }
     .boxhome{
         font-size: 15px;
@@ -165,6 +166,9 @@
         width: 22vw;
         font-size: 15px;
     }
+    .homeitem{
+        width:90%;
+    }
 }
 
 /**/
@@ -178,6 +182,28 @@
     justify-content: space-evenly;
     overflow-x: auto;
     margin-top: 7%;
+
+}
+@media screen and (max-width: 600px) {
+    .item{
+        padding-top: 55%;
+        
+        /* phone */
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 1024px)  {
+    .item{
+        padding-top: 13%;
+        padding-right: 4%;
+        /* tablet */
+    }
+}
+@media screen and (min-width: 1025px) {
+    .item{
+        padding-top: 2%;
+        /* computer */
+    }
+
 }
 
 .picsize{
@@ -200,8 +226,8 @@
     text-align: center;
     color: white;
     padding: 10px;
-    margin-left: 12px;
-    margin-right: 10px;
+    /* margin-left: 12px; */
+    
 }
 .boxcover:hover{
     background-color: #FFDB58;
@@ -230,7 +256,7 @@
     text-align: center;
     color: white;
     padding: 10px;
-    margin-left: 12px;
+    
 }
 .boxcontent:hover{
     background-color: #FFDB58;
@@ -274,7 +300,7 @@
     margin-top: 2%;
     border-radius: 5px;
 }
-.contactrow1{
+.contactrow1, .contactrow3{
     display: flex;
     flex-direction: row;
     font-size: 13px;
@@ -283,16 +309,45 @@
 }
 .contactrow2{
     display: flex;
-    flex-direction: row;
-    font-size: 14px;
+    flex-direction: column;
+    /* font-size: 14px;
     text-align: left;
     padding-top: 10px;
-    justify-content: center;
+    justify-content: center; */
+}
+.name-item{
+    display: flex;
+    justify-content: space-evenly;
+}
+.first-name{
+    margin-right: 20px;
+}
+.last-name{
+    margin-right: 3%;
+}
+.email{
+    margin-right: 3%;
+    font-size: 15px;
+    width: 150px;
+    color: #ffffff;
+}
+.first-name, .last-name{
+    width: 80px;
+    text-align: left;
+    font-size: 15px;
+    color: #ffffff;
 }
 .piclocation{
     width: 27px;
     height: 27px;
     background: url(../img/location.png);
+    margin-left: 3vw;
+}
+.picphone{
+    width: 20px;
+    height: 20px;
+    background: url(../img/call.png);
+    margin-left: 3vw;
 }
 .backgroundcon{
     width: 80%;
@@ -318,6 +373,7 @@
     color: #fff;
     padding-left: 1px;
     padding-right: 10px;
+    margin-left: 10px;
 }
 .place{
     width: 75px;
@@ -342,32 +398,12 @@
     width: 40%;
     background-color: #37ad92;
     margin-left: 25px;
-
     padding: 20px;
     border-radius: 30px;
     box-shadow: 0 4px 10px;
 }
 .Namecon{
-    /* margin-left: 120px; */
-    
-    width: 80px;
-    color:#fff;
-    padding-top: 8px;
-    font-size: 15px;
-
-}
-.Lastcon{
-    color: #fff;
-    padding-top: 8px;
-    font-size: 15px;
-
-}
-.Emailcon{
-    color: #fff;
-    padding-top: 8px;
-    padding-left: 5%;
-    font-size: 15px;
-    width: 30%;
+    display: none;
 }
 .Reportcon{
     width: 40%;
@@ -381,29 +417,30 @@
     font-size: 1rem;
     padding: 10px;
     margin-top: 2%;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 90%;
 }
 .phonere{
     font-size: 1rem;
     padding: 10px;
     margin-top: 2%;
-    border-radius: 5px;
-    width: 41%;
-    margin-right: 15px;
+    border-radius: 10px;
+    width: 42%;
+    margin-right: 6px;
 }
 .emailre{
     font-size: 1rem;
     padding: 10px;
     margin-top: 2%;
-    border-radius: 5px;
-    width: 41%;
+    border-radius: 10px;
+    margin-left: 6px;
+    width: 42%;
 }
 .problem{
     font-size: 1rem;
     padding: 10px;
     margin-top: 2%;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 90%;
     height: 120px;
 }
@@ -479,6 +516,14 @@
 .topicbox:hover span:after {
     opacity: 1;
     right: 0;
+}
+.texttime{
+    text-align: center; 
+    color: #68ba72;
+    font-family: 'Kanit', sans-serif;
+    display: grid;
+    justify-items: center;
+    font-size: 22px;
 }
 .textform{
     text-align: center; 
@@ -588,15 +633,177 @@
     font-size: 17px;
     margin-left: 15%;
     margin-right: 15%;
-    background-color: #f6fef9;
-    padding: 5%;
+    /* background-color: #f6fef9; */
+    background-color: #d1eee1;
+    padding-bottom: 10%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
+
 @media screen and (max-width: 767px) {
     .item{
-        padding-top: 55%;
-        padding-left: 25%;
+        padding-top: 40%;
+        justify-items: center;
         /* phone */
     }
+    .contactrow1{
+        flex-direction: column;
+    }
+    .contactrow2{
+        justify-content: left;
+        padding-left: 5%;
+    }
+    .contactrow3{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-left: 0%;
+    }
+    .clinic{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .open{
+        width: 100px;
+        margin-left: 5%;
+    }
+    .detail1{
+        width: 320px;
+    }
+    .place{
+        width: 70px;
+        margin-left: 0%;
+    }
+    .detail2{
+        width: 320px;
+    }
+    .phone{
+        width: 70px;
+        margin-left: 0%;
+    }
+    .detail3{
+        width: 320px;
+    }
+    .Develop{
+        width: 80%;
+        height:fit-content;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0px;
+        padding-bottom: 30px;
+    }
+    .first-name, .last-name{
+        /* width: 150px;
+        justify-content: left;
+        background-color: #000000;
+        margin-left: 0%; */
+        display: none;
+    }
+    .email{
+        /* width: 150px;
+        background-color: #000000; */
+        display: none;
+    }
+    .Namecon{
+        width: fit-content;
+        color:#fff;
+        padding-top: 8px;
+        font-size: 13px;
+        text-align: left;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .Reportcon{
+        width: 80%;
+        height:fit-content;
+        margin-top: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        padding: 0px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+    .Namere{
+        margin-top: 5%;
+        width: 80%;
+    }
+    .phonere{
+        width: 80%;
+        margin-right: 0%;
+        margin-top: 3%;
+    }
+    .emailre{
+        width: 80%;
+        margin-top: 3%;
+        margin-left: 0%;
+    }
+    .problem{
+        width: 80%;
+        margin-top: 5%;
+    }
+    .mentalhealth1{
+        font-size: 25px;
+        margin-top: 15%;
+        margin-bottom: 5%;
+    }
+    /* --------------------mentalhealth--------------------- */
+    .topicbox span:after {
+        right: 0;
+    }
+    .topicbox:hover span:after {
+        display: none;
+    }
+    .topicbox{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mentalhealth{
+        font-size: 25px;
+        margin-top: 70px;
+    }
+
+    .question{
+        font-size: 17px;
+        height: fit-content;
+        width: 90%;
+        text-align: center;
+        vertical-align: middle; 
+        padding-bottom: 10px;
+        padding-top: 10px;
+        margin-bottom: 0%;
+    }
+    .textform{
+        font-size: 17px;
+    }
+    .texttime{
+        font-size: 17px;
+    }
+    .formbutton{
+        margin: 2%;
+    }
+    .buttonstress{
+        margin: 2%;
+        width: 70px;
+        height: 60px;
+    }
+    .textstress{
+        font-size: 17px;
+    }
+    .resultbtn{
+        width: 60%;
+        height: 7vh;
+        margin-bottom: 50px;
+    }
+    .popup{
+        padding-top: 0%;
+        padding-bottom: 20%;
+    }
+    /* ---------------------------------------------------- */
 }
 @media screen and (min-width: 768px) and (max-width: 1023px)  {
     .item{
@@ -614,16 +821,19 @@
     .question{
         font-size: 16.5px;
         /* justify-content: center;  */
-        height: 50px;
+        height: fit-content;
         width: 85%;
         /* justify-items: center; */
         text-align: center;
-        vertical-align: middle; 
+        vertical-align: middle;
+        padding-top: 10px;
+        padding-bottom: 10px; 
         /* align-self: center; */
+        margin-bottom: 0%;
     }
     .buttonstress{
         
-        height: 5vh;
+        height: 6vh;
         width: 8vh;
     }
     .clinic{
@@ -652,17 +862,37 @@
         padding-right: 59px;
         width: 55%;
     }
+    /* .contact1{
+        padding-top: 0%;
+    } */
     .Namecon{
         margin-left: 1px;
+        /* display: flex; */
     }
+    /* .first-name, .last-name, .email{
+        display: none;
+    } */
     .mentalhealth1{
         padding-top: 7%;
     }
     .Reportcon{
         width: 50%;
     }
-    .contactrow2{
-        
+    .Namere{
+        margin-top: 5%;
+    }
+    .phonere{
+        width: 90%;
+        margin-right: 0%;
+        margin-top: 3%;
+    }
+    .emailre{
+        width: 90%;
+        margin-left: 0%;
+        margin-top: 3%;
+    }
+    .problem{
+        margin-top: 5%;
     }
 }
 

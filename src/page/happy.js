@@ -129,15 +129,15 @@ const Happy = props => {
     console.log(sharedScore);
     if (sharedScore <= 27) {
       setMessage('ความสุขต่ำกว่าคนปกติ')
-      setColor('#4d2eb8')
+      setColor('#b02c43')
     }
     else if (sharedScore <= 34){
       setMessage('ความสุขเท่ากับคนทั่วไป')
-      setColor('#45d4c9')
+      setColor('#346ebb')
     }
     else{
       setMessage('ความสุขมากกว่าคนทั่วไป')
-      setColor('#2ada56')
+      setColor('#52B788')
     }
     setShowAssessment(true);
   };
@@ -173,50 +173,52 @@ const Happy = props => {
                     <div className='mentalhealth'> 
                         <br/><br/>แบบประเมินความสุขคนไทย
                     </div> 
+                    <div className='texttime'>( ในช่วง 1 เดือนที่ผ่านมา จนถึงปัจจุบัน )<br/></div>
                     <div className='textform'>
-                        <br/><p className='question'>&emsp;&emsp;1.&emsp;ท่านรู้สึกพึงพอใจในชีวิต</p><br/>
+                      
+                        <br/><p className='question'>&emsp;&emsp;1.&nbsp;&nbsp;ท่านรู้สึกพึงพอใจในชีวิต</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={1}/>
 
-                        <br/><p className='question'>&emsp;&emsp;2.&emsp;ท่านรู้สึกสบายใจ</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;2.&nbsp;&nbsp;ท่านรู้สึกสบายใจ</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={2}/>
 
-                        <br/><p className='question'>&emsp;&emsp;3.&emsp;ท่านรู้สึกภูมิใจในตนเอง</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;3.&nbsp;&nbsp;ท่านรู้สึกภูมิใจในตนเอง</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={3}/>
 
-                        <br/><p className='question'>&emsp;&emsp;4.&emsp;ท่านรู้สึกเบื่อหน่ายท้อแท้กับการดำเนินชีวิตประจำวัน</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;4.&nbsp;&nbsp;ท่านรู้สึกเบื่อหน่ายท้อแท้กับการดำเนินชีวิตประจำวัน</p><br/>
                         <MyButton2 sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={4}/>
 
-                        <br/><p className='question'>&emsp;&emsp;5.&emsp;ท่านรู้สึกผิดหวังในตนเอง</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;5.&nbsp;&nbsp;ท่านรู้สึกผิดหวังในตนเอง</p><br/>
                         <MyButton2 sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={5}/>
 
-                        <br/><p className='question'>&emsp;&emsp;6.&emsp;ท่านรู้สึกว่าชีวิตมีแต่ความทุกข์</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;6.&nbsp;&nbsp;ท่านรู้สึกว่าชีวิตมีแต่ความทุกข์</p><br/>
                         <MyButton2 sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={6}/>
 
-                        <br/><p className='question'>&emsp;&emsp;7.&emsp;ท่านสามารถทำใจยอมรับได้สำหรับปัญหาที่ยากจะแก้ไข (เมื่อมีปัญหา)</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;7.&nbsp;&nbsp;ท่านสามารถทำใจยอมรับได้สำหรับปัญหาที่ยากจะแก้ไข (เมื่อมีปัญหา)</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={7}/>
 
-                        <br/><p className='question'>&emsp;&emsp;8.&emsp;ท่านมั่นใจว่าจะสามารถควบคุมอารมณ์ได้เมื่อมีเหตุการณ์คับขันหรือร้ายแรงที่เกิดขึ้น</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;8.&nbsp;&nbsp;ท่านมั่นใจว่าจะสามารถควบคุมอารมณ์ได้เมื่อมีเหตุการณ์คับขันหรือร้ายแรงที่เกิดขึ้น</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={8}/>
 
-                        <br/><p className='question'>&emsp;&emsp;9.&emsp;ท่านมั่นใจที่จะเผชิญกับเหตุการณ์ร้ายแรงที่เกิดขึ้นในชีวิต</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;9.&nbsp;&nbsp;ท่านมั่นใจที่จะเผชิญกับเหตุการณ์ร้ายแรงที่เกิดขึ้นในชีวิต</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={9}/>
 
-                        <br/><p className='question'>&emsp;&emsp;10.&emsp;ท่านรู้สึกเห็นอกเห็นใจเมื่อผู้อื่นมีความทุกข์</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;10.&nbsp;&nbsp;ท่านรู้สึกเห็นอกเห็นใจเมื่อผู้อื่นมีความทุกข์</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={10}/>
 
-                        <br/><p className='question'>&emsp;&emsp;11.&emsp;ท่านรู้สึกเป็นสุขในการช่วยเหลือผู้อื่นที่มีปัญหา</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;11.&nbsp;&nbsp;ท่านรู้สึกเป็นสุขในการช่วยเหลือผู้อื่นที่มีปัญหา</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={11}/>
 
-                        <br/><p className='question'>&emsp;&emsp;12.&emsp;ท่านให้ความช่วยเหลือแก่ผู้อื่นเมื่อมีโอกาส</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;12.&nbsp;&nbsp;ท่านให้ความช่วยเหลือแก่ผู้อื่นเมื่อมีโอกาส</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={12}/>
 
-                        <br/><p className='question'>&emsp;&emsp;13.&emsp;ท่านรู้สึกมั่นคงปลอดภัยเมื่ออยู่ในครอบครัว</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;13.&nbsp;&nbsp;ท่านรู้สึกมั่นคงปลอดภัยเมื่ออยู่ในครอบครัว</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={13}/>
 
-                        <br/><p className='question'>&emsp;&emsp;14.&emsp;หากท่านป่วยหนัก ท่านเชื่อว่าคนในครอบครัวจะดูแลท่านเป็นอย่างดี</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;14.&nbsp;&nbsp;หากท่านป่วยหนัก ท่านเชื่อว่าคนในครอบครัวจะดูแลท่านเป็นอย่างดี</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={14}/>
 
-                        <br/><p className='question'>&emsp;&emsp;15.&emsp;สมาชิกในครอบครัวมีความรักและผูกพันต่อกัน</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;15.&nbsp;&nbsp;สมาชิกในครอบครัวมีความรักและผูกพันต่อกัน</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={15}/>
 
                         <br/><br/><button className='resultbtn' onClick={calscore}>ประเมินผล</button>

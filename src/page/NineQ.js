@@ -129,32 +129,33 @@ const Mentalhealth = props =>{
                     <div className='mentalhealth'> 
                         <br/><br/>แบบประเมินโรคซึมเศร้าด้วย 9 คำถาม (9Q)
                     </div> 
+                    <div className='texttime'>( ในช่วง 2 สัปดาห์ที่ผ่านมา รวมทั้งวันนี้ )</div>
                     <div className='textform'>
-                        <br/><div className='question'>&emsp;&emsp;1.&emsp;เบื่อ ไม่สนใจอยากทำอะไร</div><br/>
+                        <br/><div className='question'>&emsp;&emsp;1.&nbsp;&nbsp;เบื่อ ไม่สนใจอยากทำอะไร</div><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={1}/>
 
-                        <br/><p className='question'>&emsp;&emsp;2.&emsp;ไม่สบายใจ ซึมเศร้า ท้อแท้</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;2.&nbsp;&nbsp;ไม่สบายใจ ซึมเศร้า ท้อแท้</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={2}/>
 
-                        <br/><p className='question'>&emsp;&emsp;3.&emsp;หลับยากหรือหลับๆตื่นๆหรือหลับมากไป</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;3.&nbsp;&nbsp;หลับยากหรือหลับๆตื่นๆหรือหลับมากไป</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={3}/>
 
-                        <br/><p className='question'>&emsp;&emsp;4.&emsp;เหนื่อยง่ายหรือไม่ค่อยมีแรง</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;4.&nbsp;&nbsp;เหนื่อยง่ายหรือไม่ค่อยมีแรง</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={4}/>
                         
-                        <br/><p className='question'>&emsp;&emsp;5.&emsp;เบื่ออาหารหรือกินมากเกินไป</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;5.&nbsp;&nbsp;เบื่ออาหารหรือกินมากเกินไป</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={5}/>
                         
-                        <br/><p className='question'>&emsp;&emsp;6.&emsp;รู้สึกไม่ดีกับตัวเอง คิดว่าตัวเองล้มเหลว หรือครอบครัวผิดหวัง</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;6.&nbsp;&nbsp;รู้สึกไม่ดีกับตัวเอง คิดว่าตัวเองล้มเหลว หรือครอบครัวผิดหวัง</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={6}/>
                         
-                        <br/><p className='question'>&emsp;&emsp;7.&emsp; สมาธิไม่ดี เวลาทำอะไร เช่น ดูโทรทัศน์ ฟังวิทยุ หรือทำงานที่ต้องใช้ความตั้งใจ</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;7.&nbsp;&nbsp;สมาธิไม่ดี เวลาทำอะไร เช่น ดูโทรทัศน์ ฟังวิทยุ หรือทำงานที่ต้องใช้ความตั้งใจ</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={7}/>
                         
-                        <br/><div className='question'>&emsp;&emsp;8.&emsp;พูดช้าทำอะไรช้าลงจนคนอื่นสังเกตเห็นได้ หรือกระสับกระส่ายไม่สามารถอยู่นิ่งได้เหมือนที่เคยเป็น</div><br/>
+                        <br/><div className='question'>&emsp;&emsp;8.&nbsp;&nbsp;พูดช้าทำอะไรช้าลงจนคนอื่นสังเกตเห็นได้ หรือกระสับกระส่ายไม่สามารถอยู่นิ่งได้เหมือนที่เคยเป็น</div><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={8}/>
                         
-                        <br/><p className='question'>&emsp;&emsp;9.&emsp;คิดทำร้ายตนเอง หรือคิดว่าถ้าตายไปคงจะดี</p><br/>
+                        <br/><p className='question'>&emsp;&emsp;9.&nbsp;&nbsp;คิดทำร้ายตนเอง หรือคิดว่าถ้าตายไปคงจะดี</p><br/>
                         <MyButton sharedScore={sharedScore} setSharedScore={setSharedScore} questionId={9}/>
                         
                         <br/><br/><button className='resultbtn' onClick={calscore}>ประเมินผล</button>
