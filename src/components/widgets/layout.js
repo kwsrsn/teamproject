@@ -45,8 +45,8 @@ const Layout = ({children}) => {
                                 ติดต่อสอบถาม/แจ้งปัญหา
                             </a><br/>
                             <img src= {mail} style={{height:"12px"}}/>
-                            <a href="mailto: 65010739@kmitl.ac.th" rel="noopener noreferrer" className='bottomhome'> &nbsp;65010...@kmitl.ac.th </a> or
-                            <a href="/contact" rel="noopener noreferrer" className='bottomhome'> 65010...@kmitl.ac.th </a><br/>
+                            {/* <a href="mailto: 65010739@kmitl.ac.th" rel="noopener noreferrer" className='bottomhome'> &nbsp;65010...@kmitl.ac.th </a> or */}
+                            <a href="/contact" rel="noopener noreferrer" className='bottomhome'> Contact</a><br/>
                             <img src= {phone} style={{height:"13px"}}/>
                             <a href="/contact" rel="noopener noreferrer" className='bottomhome'> &nbsp;ข้อมูลการติดต่อสอบถาม </a>
                         </div>  
@@ -56,7 +56,6 @@ const Layout = ({children}) => {
                         แบบประเมินสุขภาพจิต<br/>
                         <div className='bottomtexthome'>
                             <br/><a href="/nineq" rel="noopener noreferrer" className='bottomhome'> แบบประเมินโรคซึมเศร้าด้วย 9 คำถาม (9Q) </a><br/>
-                            <a href="/eightq" rel="noopener noreferrer" className='bottomhome'> แบบประเมินการฆ่าตัวตาย 8 คำถาม (8Q) </a><br/>
                             <a href="/happy" rel="noopener noreferrer" className='bottomhome'> แบบประเมินความสุขคนไทย </a><br/>
                             <a href="/stress" rel="noopener noreferrer" className='bottomhome'> แบบวัดความเครียด กรมสุขภาพจิต (SPST - 20) </a>
                         </div>
